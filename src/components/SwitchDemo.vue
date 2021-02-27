@@ -1,17 +1,19 @@
 <template>
     <div>
-        Switch
+        <h3>Switch 组件</h3>
+        <Switch v-model:value="bool"/>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue';
+import Switch from '../lib/Switch.vue';
 
 export default defineComponent({
+    components:{Switch},
     setup () {
-        
-
-        return {}
+        const bool = ref(false);
+        return {bool};
     }
 })
 </script>

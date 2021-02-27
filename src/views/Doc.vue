@@ -2,7 +2,7 @@
     <div class="guoguo-layout">
         <Topnav class="guoguo-nav"/>
         <div class="guoguo-content">
-            <aside class="guoguo-asidemenu">
+            <aside class="guoguo-asideMenu">
                 <h2>组件列表</h2>
                 <ul>
                     <li>
@@ -44,8 +44,24 @@ import Topnav from "../components/Topnav.vue";
     >.guoguo-content{
         display: flex;
         flex-grow: 1;
-        >.guoguo-asidemenu {
-            border: 1px solid;
+        >.guoguo-asideMenu {
+            border: 1px solid #aaa;
+            background-color: lightblue;
+            padding: 24px 16px;
+            > h2 {
+                font-size: 20px;
+                border: 1px solid #eee;
+                padding: 8px 16px;
+            }
+            > ul {
+                margin-top: 8px;
+                >li {
+                padding: 8px 48px 8px 24px;
+                text-align: left;
+                border: 1px solid #eee;
+                }
+            }
+            
         }
     }
 }
