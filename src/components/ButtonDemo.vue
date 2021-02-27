@@ -5,8 +5,8 @@
     <div>
         <Button @click="onClick">普通按钮</Button>
         <Button theme="button">普通按钮</Button>
-        <Button theme="link">文本按钮</Button>
-        <Button theme="text">连接按钮</Button>
+        <Button theme="link">连接按钮</Button>
+        <Button theme="text">文本按钮</Button>
     </div>
    
     <h3>尺寸</h3>
@@ -70,8 +70,5 @@ export default defineComponent({
 div {
     margin:16px auto; padding: 24px; background: #fff;
     width: 50%; border-radius: 8px;
-}
-Button {
-    margin: 0 4px;
 }
 </style>
