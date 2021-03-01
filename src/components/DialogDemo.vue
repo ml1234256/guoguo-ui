@@ -23,11 +23,9 @@ export default defineComponent({
         const x = ref(false);
         const toggle = ()=>{
            x.value = !x.value;
-           console.log(x);
-           console.log(x.value);
         }
         const f1 = () => {
-            return false
+            return true;
         }
         const f2 = () => {}
         return {x, toggle, f1, f2}

@@ -1,7 +1,8 @@
 <template>
 {{visible}}
-    <div v-if="visible">
-       <div class="guoguo-dialog-overlay" @click="onClickOverlay"></div>
+    <template v-if="visible">
+        <teleport to='body'> 
+            <div class="guoguo-dialog-overlay" @click="onClickOverlay"></div>
             <div class="guoguo-dialog-wrapper">
                 <div class="guoguo-dialog">
                     <header>
@@ -16,8 +17,10 @@
                         <Button @click="cancel">Cancel</Button>
                     </footer>
                 </div>
-        </div>
-    </div>
+            </div>
+        </teleport>
+
+    </template>
 </template>
 
 <script lang="ts">
@@ -37,6 +40,9 @@ export default defineComponent({
         },
         ok: {
             type:Function
+        },
+        cancel: {
+            type: Function
         }
     },
     setup (props, context) {
@@ -44,18 +50,18 @@ export default defineComponent({
             context.emit('update:visible', false)
         }
         const onClickOverlay = () => {
-            console.log(1)
             if(props.closeOnClickOverlay) {
                 close();
             }
         }
         const ok = () => {
-            if (props.ok() === false) {
+            if (props.ok?.() !== false) {
                 close()
             }
         }
         const cancel = () => {
-            close()
+            props.cancel?.();
+            close();
         }
         return {close, onClickOverlay, ok, cancel}
     }
