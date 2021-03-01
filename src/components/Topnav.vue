@@ -6,18 +6,21 @@
             <li><router-link to="/">Home</router-link></li>
             <li>菜单2</li>
         </ul>
-        <span class="toggle-aside"></span>
+        <span class="toggle-aside" @click="toggleMenu"></span>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, inject, Ref } from 'vue'
 
 export default defineComponent({
     setup () {
-        
+        const menuVisible = inject<Ref<Boolean>>("menuVisible"); // get
+        const toggleMenu = () => {
+            menuVisible.value = !menuVisible.value;
+        }
 
-        return {}
+        return {toggleMenu}
     }
 })
 </script>

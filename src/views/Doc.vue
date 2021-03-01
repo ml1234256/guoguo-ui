@@ -2,7 +2,7 @@
     <div class="guoguo-layout">
         <Topnav class="guoguo-nav"/>
         <div class="guoguo-content">
-            <aside class="guoguo-asideMenu">
+            <aside v-if="menuVisible" class="guoguo-asideMenu">
                 <h2>组件列表</h2>
                 <ul>
                     <li>
@@ -29,10 +29,15 @@
 </template>
 
 <script lang="ts">
+import { inject, Ref } from 'vue';
 import Topnav from "../components/Topnav.vue";
 
     export default{
-        components: {Topnav}
+        components: {Topnav},
+        setup() {
+            const menuVisible = inject<Ref<Boolean>>("menuVisible"); // get
+            return {menuVisible};
+        }
     }
 </script>
 
@@ -68,5 +73,6 @@ import Topnav from "../components/Topnav.vue";
 main {
     background: #eee;
     flex-grow: 1;
+    overflow: auto;
 }
 </style>
