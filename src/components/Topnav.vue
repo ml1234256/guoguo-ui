@@ -3,8 +3,8 @@
         <div class="guoguo-logo">logo</div>
 
         <ul class="guoguo-menu">
+            <li><router-link to="/doc">Document</router-link></li>
             <li><router-link to="/">Home</router-link></li>
-            <li>菜单2</li>
         </ul>
         <span class="toggle-aside" @click="toggleMenu"></span>
     </div>
@@ -27,11 +27,11 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .guoguo-topnav {
+    background: pink;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: pink;
     padding: 16px;
     position: relative;
     z-index: 10;
