@@ -6,9 +6,9 @@ import SwitchDemo from "./components/SwitchDemo.vue";
 import DialogDemo from "./components/DialogDemo.vue";
 import TabsDemo from "./components/TabsDemo.vue";
 import DocDemo from "./components/DocDemo.vue";
-import IntroDemo from './components/IntroDemo.vue';
-import InstallDemo from './components/InstallDemo.vue';
-import GetStartDemo from './components/GetStartDemo.vue';
+import IntroDemo from './views/Intro.vue';
+import InstallDemo from './views/Install.vue';
+import GetStartDemo from './views/GetStarted.vue';
 
   
 const history = createWebHashHistory();

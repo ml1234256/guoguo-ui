@@ -5,7 +5,7 @@
             <h1>锅锅UI</h1>
             <h2>一个好用的 Vue UI 组件</h2> 
             <p class="guoguo-actions">
-                <a class="guoguo-github" href="https://github.com/ml1234256/guoguo-ui">GiHhub</a>
+                <a class="guoguo-github" href="https://github.com/ml1234256/guoguo-ui">GitHub</a>
                 <router-link to="/doc">开始</router-link>
             </p> 
         </div>
@@ -13,7 +13,7 @@
    <div class="guoguo-features">
        <ul>
            <li>
-                <svg class="icon" aria-hidden="true">
+                <svg class="icon">
                     <use xlink:href="#icon-guoguo-vue"></use>
                 </svg>
                 <div>          
@@ -22,7 +22,7 @@
                 </div>
            </li>
                 <li>
-                <svg class="icon" aria-hidden="true">
+                <svg class="icon">
                     <use xlink:href="#icon-guoguo-ts"></use>
                 </svg>
                 <div>
@@ -31,7 +31,7 @@
                 </div>
            </li>
             <li>
-                <svg class="icon" aria-hidden="true">
+                <svg class="icon">
                     <use xlink:href="#icon-guoguo-light"></use>
                 </svg>
                 <div>

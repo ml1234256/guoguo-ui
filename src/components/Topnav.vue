@@ -6,7 +6,11 @@
             <li><router-link to="/doc">Document</router-link></li>
             <li><router-link to="/">Home</router-link></li>
         </ul>
-        <span class="toggle-aside" @click="toggleMenu"></span>
+        <span class="toggle-aside" @click="toggleMenu">
+             <svg class="icon">
+                    <use xlink:href="#icon-guoguo-light"></use>
+            </svg>
+        </span>
     </div>
 </template>
 
@@ -47,9 +51,9 @@ export default defineComponent({
         }
     }
     >.toggle-aside{
+        font-size: 24px;
         width: 24px;
         height: 24px;
-        background: red;
         position: absolute;
         left: 16px;
         top: 50%;
