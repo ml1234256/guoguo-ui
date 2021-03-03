@@ -1,6 +1,6 @@
 <template>
     <div class="guoguo-layout">
-        <Topnav class="guoguo-nav"/>
+        <Topnav toggleVisible class="guoguo-nav"/>
         <div class="guoguo-content">
             <aside v-if="menuVisible" class="guoguo-asideMenu">
                 <h2>开发指南</h2>

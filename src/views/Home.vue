@@ -15,11 +15,12 @@
            <li>
                 <svg class="icon">
                     <use xlink:href="#icon-guoguo-vue"></use>
-                </svg>
-                <div>          
+                </svg> 
+                <div>
                     <h3>基于Vue3</h3>
                     <p>使用Vue3写的组件</p>
-                </div>
+                </div>       
+
            </li>
                 <li>
                 <svg class="icon">
@@ -60,7 +61,7 @@ $border-radius: 4px;
 .guoguo-topnav-banner{
     background: pink;
     .guoguo-banner {
-        padding: 100px 0;
+        padding: 80px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -88,30 +89,51 @@ $border-radius: 4px;
     }
 }
 .guoguo-features {
-    width: 400px;
     margin: 64px auto;
-
+    padding:0 24px;
+   // border:1px solid;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        >li {
+           // border:1px solid;
+            width:360px;
+            margin: 16px 0;
+            display: flex;
+            justify-content: start;
+            >svg{
+                grid-area: icon;
+                width: 64px;
+                height: 64px;
+                margin-right: 12px;
+            }
+            h3 {
+                font-size: 28px; 
+            }
+            p {
+                padding-top:2px;
+            }
+        }
+    }
+    @media (min-width:500px) {
+        width:500px;
+    }
     @media (min-width: 800px) {
         width:800px;
+        >ul{
+            >li{ 
+                width:50%;
+                justify-content: center;
+            }
+        }
     }
     @media (min-width: 1200px) {
         width: 1200px;
-    }
-    >ul{
-        display: flex;
-        justify-content: center;
-        >li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 400px;
-            margin: 16px 0;
-            >svg{
-                width: 64px;
-                height: 64px;
+        >ul{
+            >li{ 
+                width:33.3333%;
+                justify-content: center;
             }
-            h3 {font-size: 28px; padding: 8px;}
-            p {padding: 8px;}
         }
     }
 }

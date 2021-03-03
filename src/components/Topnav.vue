@@ -6,9 +6,9 @@
             <li><router-link to="/doc">Document</router-link></li>
             <li><router-link to="/">Home</router-link></li>
         </ul>
-        <span class="toggle-aside" @click="toggleMenu">
+        <span v-if="toggleVisible" class="toggle-aside" @click="toggleMenu">
              <svg class="icon">
-                    <use xlink:href="#icon-guoguo-light"></use>
+                    <use xlink:href="#icon-guoguo-menu"></use>
             </svg>
         </span>
     </div>
@@ -18,6 +18,12 @@
 import { defineComponent, inject, Ref } from 'vue'
 
 export default defineComponent({
+    props: {
+      toggleVisible: {
+          type: Boolean,
+          default: false,
+      }  
+    },
     setup () {
         const menuVisible = inject<Ref<Boolean>>("menuVisible"); // get
         const toggleMenu = () => {
