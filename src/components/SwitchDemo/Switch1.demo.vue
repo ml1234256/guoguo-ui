@@ -3,18 +3,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import Switch from '../lib/Switch.vue';
+import { ref } from 'vue';
+import Switch from '../../lib/Switch.vue';
 
-export default defineComponent({
+export default{
     components: {Switch},
     setup () {
         const bool = ref(false);
         return {bool}
     }
-})
+}
 </script>
-
-<style scoped>
-
-</style>

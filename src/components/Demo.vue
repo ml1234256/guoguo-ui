@@ -1,34 +1,46 @@
 <template>
-    <div>
-        <h1>Switch 组件示例</h1>
-        <Demo :component="Switch1Demo" />
-        <Demo :component="Switch2Demo" />
-    </div>
+        <div class="demo">
+            <h2>标题</h2>
+            <div class="demo-component">
+                <component :is="component" />
+            </div>
+            <div class="demo-actions">
+                <Button @click="toggleCode">显示代码</Button>
+            </div>
+            <div v-if="codeVisible" class="demo-code">
+                <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+            </div>
+        </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import Switch from '../lib/Switch.vue';
 import Button from '../lib/Button.vue';
-import Switch1Demo from './SwitchDemo/Switch1.demo.vue';
-import Switch2Demo from './SwitchDemo/Switch2.demo.vue';
-import Demo from './Demo.vue';
 
 export default defineComponent({
-    components:{Switch, Button, Demo},
-    setup () {
-        return {Switch1Demo, Switch2Demo};
+    components: {Button},
+    props: {
+        component: Object
+    },
+    setup (props) {
+        const codeVisible = ref(false);
+        const toggleCode = () => {
+            codeVisible.value = !codeVisible.value;
+        }
+
+        return {codeVisible, toggleCode}
     }
 })
 </script>
 
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
-$border-radius:4px;
+$border-radius: 4px;
 
 .demo{
     border: 1px solid $border-color;
     border-radius: $border-radius;
+    text-align: left;
     margin: 16px 32px;
     background: #fff;
     >h2 {
