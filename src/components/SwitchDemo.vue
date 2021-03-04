@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import Switch from '../lib/Switch.vue';
 import Button from '../lib/Button.vue';
 import Switch1Demo from './SwitchDemo/Switch1.demo.vue';

@@ -23,7 +23,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Button from "../lib/Button.vue";
 import Demo from './Demo.vue';
 import Button1Demo from './ButtonDemo/Button1.demo.vue';
 import Button2Demo from './ButtonDemo/Button2.demo.vue';
@@ -50,8 +49,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-div {
-    margin:16px auto; padding: 24px; background: #fff;
-border-radius: 8px;
-}
+
 </style>

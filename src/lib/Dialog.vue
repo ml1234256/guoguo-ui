@@ -1,5 +1,4 @@
 <template>
-{{visible}}
     <template v-if="visible">
         <teleport to='body'> 
             <div class="guoguo-dialog-overlay" @click="onClickOverlay"></div>

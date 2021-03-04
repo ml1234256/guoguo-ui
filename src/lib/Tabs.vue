@@ -86,7 +86,7 @@ $border-color: #d9d9d9;
         }
     }
     &-content{
-        padding: 1.5em 0;
+        padding: 1.5em 1em;
     }
  }   
 </style>
