@@ -4,7 +4,7 @@
         <div class="demo">
             <h2>常规用法</h2>
             <div class="demo-component">
-                <Switch v-model:value="bool1" />
+                <Switch1Demo />
             </div>
             <div class="demo-actions">
                 <Button>显示代码</Button>
@@ -33,9 +33,10 @@
 import { defineComponent, ref } from 'vue';
 import Switch from '../lib/Switch.vue';
 import Button from '../lib/Button.vue';
+import Switch1Demo from './Switch1.demo.vue';
 
 export default defineComponent({
-    components:{Switch, Button},
+    components:{Switch, Button, Switch1Demo},
     setup () {
         const bool1 = ref(false);
         const bool2 = ref(false);
