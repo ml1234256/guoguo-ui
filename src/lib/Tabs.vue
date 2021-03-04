@@ -61,7 +61,6 @@ $border-color: #d9d9d9;
 .guoguo-tabs {
     &-nav {
         display: flex;
-        justify-content: center;
         color: $text-color;
         border-bottom: 1px solid $border-color;
         position: relative;
@@ -81,7 +80,7 @@ $border-color: #d9d9d9;
             height: 2px;
             background: $blue;
             left: 0;
-            bottom: -1px;
+            bottom: 0px;
             transition: all 250ms;
         }
     }

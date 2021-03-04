@@ -1,3 +1,4 @@
+<demo>禁用按钮</demo>
 <template>
         <Button disabled>禁用按钮</Button>
         <Button theme="link" disabled>禁用连接按钮</Button>

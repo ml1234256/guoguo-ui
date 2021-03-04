@@ -42,14 +42,13 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .guoguo-topnav {
-    background: pink;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 14px;
     position: relative;
-    z-index: 10;
+    z-index: 20;
     >.guoguo-logo {
         max-width: 6em;
         font-size:26px;

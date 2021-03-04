@@ -1,3 +1,4 @@
+<demo>用法示例</demo>
 <template>
     <div>
     <Tabs v-model:selected="selected" class="guoguo-tabs">

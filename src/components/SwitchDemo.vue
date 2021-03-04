@@ -14,6 +14,7 @@ import Switch1Demo from './SwitchDemo/Switch1.demo.vue';
 import Switch2Demo from './SwitchDemo/Switch2.demo.vue';
 import Demo from './Demo.vue';
 
+
 export default defineComponent({
     components:{Switch, Button, Demo},
     setup () {

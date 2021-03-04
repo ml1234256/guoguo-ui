@@ -1,3 +1,4 @@
+<demo>按钮类型</demo>
 <template>
  <div>
         <Button level="main">主要按钮</Button>

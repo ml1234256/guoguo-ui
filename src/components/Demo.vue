@@ -1,6 +1,6 @@
 <template>
         <div class="demo">
-            <h2>标题</h2>
+            <h2>{{component.__sourceCodeTitle}}</h2>
             <div class="demo-component">
                 <component :is="component" />
             </div>
@@ -8,14 +8,17 @@
                 <Button @click="toggleCode">显示代码</Button>
             </div>
             <div v-if="codeVisible" class="demo-code">
-                <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+                <pre class="language-html" v-html="code" />
             </div>
         </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import Button from '../lib/Button.vue';
+import 'prismjs';
+import 'prismjs/themes/prism.css';
+const Prism = (window as any).Prism;
 
 export default defineComponent({
     components: {Button},
@@ -23,12 +26,15 @@ export default defineComponent({
         component: Object
     },
     setup (props) {
+        const code = computed(() => {
+            return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
+        })
         const codeVisible = ref(false);
         const toggleCode = () => {
             codeVisible.value = !codeVisible.value;
         }
 
-        return {codeVisible, toggleCode}
+        return {codeVisible, toggleCode, Prism, code}
     }
 })
 </script>

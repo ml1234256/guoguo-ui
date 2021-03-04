@@ -48,33 +48,52 @@ import Topnav from "../components/Topnav.vue";
 </script>
 
 <style lang="scss" scoped>
+$border-color:#d9d9d9;
 .guoguo-layout{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #eee;
+    >.guoguo-nav {
+        flex-shrink: 0;
+    }
     >.guoguo-content{
         display: flex;
         flex-grow: 1;
         >.guoguo-asideMenu {
-            border: 1px solid #aaa;
+            border: 1px solid $border-color;
             background-color: lightblue;
-            padding: 24px 16px;
+            flex-shrink:0;
+            text-align: left;
+            padding-top:70px;
+            height:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:10;
             > h2 {
                 font-size: 20px;
-                padding: 8px 0;
+                padding: 8px 16px;
             }
             > ul {
-                margin-top: 8px;
                 >li {
-                padding: 8px 48px 8px 24px;
-                text-align: left;
+                    margin-bottom:4px;
+                    >a{
+                        display: block;
+                        padding: 4px 16px;
+                        text-decoration: none;
+    
+                    }
+                    .router-link-active {
+                        background:#fff;
+                    }
                 }
             }
         }
         >.guoguo-doc-content {
-            background: #eee;
             flex-grow: 1;
             overflow: auto;
+            margin-left:156px;
         }
     }
 }

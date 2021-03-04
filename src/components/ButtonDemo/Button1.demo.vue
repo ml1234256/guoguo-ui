@@ -1,3 +1,6 @@
+<demo>
+常规使用
+</demo>
 <template>
         <Button @click="onClick">普通按钮</Button>
         <Button theme="button">普通按钮</Button>

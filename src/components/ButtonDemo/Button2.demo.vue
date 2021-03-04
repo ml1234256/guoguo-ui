@@ -1,3 +1,4 @@
+<demo>设置尺寸</demo>
 <template>
 <Button size="big">尺寸大</Button>
         <Button>尺寸普通</Button>
