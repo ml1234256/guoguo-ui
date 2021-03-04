@@ -6,7 +6,7 @@
             <h2>一个好用的 Vue UI 组件</h2> 
             <p class="guoguo-actions">
                 <a class="guoguo-github" href="https://github.com/ml1234256/guoguo-ui">GitHub</a>
-                <router-link to="/doc">开始</router-link>
+                <router-link to="/doc/get-start">开始</router-link>
             </p> 
         </div>
     </div>

@@ -1,15 +1,20 @@
 <template>
     <div class="guoguo-topnav">
-        <div class="guoguo-logo">logo</div>
+        <div class="guoguo-logo">
+            <router-link to="/">
+             <svg class="icon">
+                    <use xlink:href="#icon-guo"></use>
+            </svg>
+            </router-link>
+        </div>
 
         <ul class="guoguo-menu">
-            <li><router-link to="/doc">Document</router-link></li>
-            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/doc">文档</router-link></li>
         </ul>
         <span v-if="toggleVisible" class="toggle-aside" @click="toggleMenu">
-             <svg class="icon">
+                <svg class="icon">
                     <use xlink:href="#icon-guoguo-menu"></use>
-            </svg>
+                </svg>
         </span>
     </div>
 </template>
@@ -42,11 +47,12 @@ export default defineComponent({
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 16px;
+    padding: 14px;
     position: relative;
     z-index: 10;
     >.guoguo-logo {
         max-width: 6em;
+        font-size:26px;
     }
     >.guoguo-menu{
         display: flex;
