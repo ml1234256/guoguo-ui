@@ -8,6 +8,7 @@ import TabsDemo from "./components/TabsDemo.vue";
 import IntroDemo from './views/Intro.vue';
 import InstallDemo from './views/Install.vue';
 import GetStartDemo from './views/GetStarted.vue';
+import ProgressDemo from './components/ProgressDemo.vue';
 
   
 const history = createWebHashHistory();
@@ -24,7 +25,8 @@ export const router = createRouter({
                 { path: "button", component: ButtonDemo },
                 { path: "switch", component: SwitchDemo },
                 { path: "dialog", component: DialogDemo },
-                { path: "Tabs", component: TabsDemo}
+                { path: "tabs", component: TabsDemo },
+                { path: "progress", component: ProgressDemo}
         ] }
     ]
 });
