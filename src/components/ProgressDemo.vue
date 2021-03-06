@@ -44,6 +44,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 section{
-        margin-bottom:24px;
+        margin-bottom:20px;
     }
 </style>

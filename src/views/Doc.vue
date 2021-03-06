@@ -12,25 +12,25 @@
                 <h2>组件列表</h2>
                 <ul>
                     <li>
-                        <router-link to="/doc/button">Button</router-link>
+                        <router-link to="/doc/button">Button 按钮</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/switch">Switch</router-link>
+                        <router-link to="/doc/switch">Switch 开关</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/dialog">Dialog</router-link>
+                        <router-link to="/doc/dialog">Dialog 对话框</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/tabs">Tabs</router-link>
+                        <router-link to="/doc/tabs">Tabs 标签页</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/progress">Progress</router-link>
+                        <router-link to="/doc/progress">Progress 进度条</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/table">Table</router-link>
+                        <router-link to="/doc/table">Table 表格</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/card">Card</router-link>
+                        <router-link to="/doc/card">Card 卡片</router-link>
                     </li>
                 </ul>
             </aside>
@@ -118,7 +118,7 @@ $topnav-background:rgb(11,94,103);
             flex-grow: 1;
             overflow: auto;
             margin-left:220px;
-            padding:90px 32px;
+            padding-top:90px;
             background: inherit;
             @media (max-width:500px) {
                 margin-left: auto;

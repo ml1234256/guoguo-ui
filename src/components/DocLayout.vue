@@ -40,9 +40,15 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+$margin: 16px;
+$margin-mobile: 16px;
 .doc-content {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 16px;
+    @media (max-width: 800px) {
+    padding: 0 8px;
+}
 }
 h1 { 
     width: 100%;
@@ -50,22 +56,19 @@ h1 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 24px;
+    padding:0 $margin;
     }
 
 .left, .right {
     width:50%;
+    padding: 0 $margin;
     @media(max-width:800px){
         width:100%;
     }
 }
-.left{
-    padding-right:16px;
-}
-.right {
-    padding-left: 16px;
-}
 .api-list{
-        padding: 16px;
+        padding:8px 16px;
+        margin: 0 $margin 60px $margin;
         background: #fff;
         border-radius: 4px;
         width: 100%;
@@ -77,5 +80,6 @@ h1 {
             font-size:20px;
         }
 }
+
 
 </style>
