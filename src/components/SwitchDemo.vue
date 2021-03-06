@@ -1,22 +1,29 @@
 <template>
-    <div>
-        <h1>Switch 组件示例</h1>
-        <Demo :component="Switch1Demo" />
-        <Demo :component="Switch2Demo" />
-    </div>
+<DocLayout>
+    <template v-slot:title>Switch 开关</template>
+    <template v-slot:left>
+        <section>
+                 <Demo :component="Switch1Demo" />
+        </section>
+    </template>
+        <template v-slot:right>
+        <section>
+                <Demo :component="Switch2Demo" />
+        </section>
+    </template>
+</DocLayout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Switch from '../lib/Switch.vue';
-import Button from '../lib/Button.vue';
 import Switch1Demo from './SwitchDemo/Switch1.demo.vue';
 import Switch2Demo from './SwitchDemo/Switch2.demo.vue';
 import Demo from './Demo.vue';
+import DocLayout from './DocLayout.vue';
 
 
 export default defineComponent({
-    components:{Switch, Button, Demo},
+    components:{ Demo, DocLayout},
     setup () {
         return {Switch1Demo, Switch2Demo};
     }
@@ -24,34 +31,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$border-color: #d9d9d9;
-$border-radius:4px;
 
-.demo{
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    margin: 16px 32px;
-    background: #fff;
-    >h2 {
-        font-size: 20px;
-        padding: 8px 16px;
-        border-bottom: 1px solid $border-color;
-    }
-    &-component{
-        padding: 16px;
-    }
-    &-actions {
-        padding: 8px 16px;
-        border-top: 1px dashed $border-color;
-    }
-    &-code {
-        padding: 8px 16px;
-        border-top: 1px dashed $border-color;
-        > pre {
-            line-height: 1.1;
-            font-family: Consolas, 'Courier New', Courier, monospace;
-            margin: 0;
-        }
-    }
-}
 </style>

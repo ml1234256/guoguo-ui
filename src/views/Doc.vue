@@ -23,8 +23,14 @@
                     <li>
                         <router-link to="/doc/tabs">Tabs</router-link>
                     </li>
-                                        <li>
+                    <li>
                         <router-link to="/doc/progress">Progress</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/doc/table">Table</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/doc/card">Card</router-link>
                     </li>
                 </ul>
             </aside>
@@ -66,15 +72,16 @@ $topnav-background:rgb(11,94,103);
         left: 0;
         background:$topnav-background;
         color:#fff;
-        box-shadow: 0px 2px 4px fade-out($color: #000000, $amount: 0.9);
+        box-shadow: 0px 4px 6px fade-out($color: #000000, $amount: 0.8);
     }
     >.guoguo-content{
         display: flex;
         flex-grow: 1;
-         background-color: $content-background;
+        background-color: $content-background;
         >.guoguo-side-nav {
             width:220px;
-            border-right: 1px solid $border-color;
+            border-right: 1px solid #ebebeb;
+            box-shadow: 0 4px 6px #ebebeb;
             background-color: $content-background;
             flex-shrink:0;
             text-align: left;
@@ -111,10 +118,8 @@ $topnav-background:rgb(11,94,103);
             flex-grow: 1;
             overflow: auto;
             margin-left:220px;
-            padding-top:80px;
+            padding:90px 32px;
             background: inherit;
-            display: flex;
-            flex-wrap: wrap;
             @media (max-width:500px) {
                 margin-left: auto;
             }

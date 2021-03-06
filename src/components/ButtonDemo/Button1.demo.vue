@@ -1,5 +1,5 @@
 <demo>
-常规使用
+按钮类型
 </demo>
 <template>
         <Button @click="onClick">普通按钮</Button>

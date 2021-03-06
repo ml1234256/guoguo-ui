@@ -9,6 +9,8 @@ import IntroDemo from './views/Intro.vue';
 import InstallDemo from './views/Install.vue';
 import GetStartDemo from './views/GetStarted.vue';
 import ProgressDemo from './components/ProgressDemo.vue';
+import TableDemo from './components/TableDemo.vue';
+import CardDemo from './components/CardDemo.vue';
 
   
 const history = createWebHashHistory();
@@ -26,7 +28,9 @@ export const router = createRouter({
                 { path: "switch", component: SwitchDemo },
                 { path: "dialog", component: DialogDemo },
                 { path: "tabs", component: TabsDemo },
-                { path: "progress", component: ProgressDemo}
+                { path: "progress", component: ProgressDemo},
+                { path: "table", component: TableDemo},
+                { path: "card", component: CardDemo}
         ] }
     ]
 });

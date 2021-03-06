@@ -1,6 +1,9 @@
 <template>
         <div class="demo">
-            <h2>{{component.__sourceCodeTitle}}</h2>
+            <h3>{{component.__sourceCodeTitle}}</h3>
+            <p class="intro">
+                <slot />
+            </p>
             <div class="demo-component">
                 <component :is="component" />
             </div>
@@ -40,29 +43,34 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$border-color: #d9d9d9;
+$border-color: #ebebeb;
 $border-radius: 4px;
 
 .demo{
-    border: 1px solid $border-color;
+    //border: 1px solid $border-color;
+    box-shadow: 0 4px 6px #ebebeb;
     border-radius: $border-radius;
     text-align: left;
-    margin: 16px 32px;
     background: #fff;
-    >h2 {
+    padding: 0px 16px;
+    >h3{
         font-size: 20px;
-        padding: 8px 16px;
+        padding: 8px 0;
         border-bottom: 1px solid $border-color;
     }
+    >.intro {
+        padding: 1em 0;
+        font-size: 14px;
+    }
     &-component{
-        padding: 16px;
+        padding-bottom: 16px;
     }
     &-actions {
-        padding: 8px 16px;
+        padding: 8px 0;
         border-top: 1px dashed $border-color;
     }
     &-code {
-        padding: 8px 16px;
+        padding: 8px 0;
         border-top: 1px dashed $border-color;
         > pre {
             line-height: 1.1;
