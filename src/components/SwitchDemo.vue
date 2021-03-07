@@ -37,6 +37,19 @@ export default defineComponent({
             type: 'boolean',
             params: '——',
             default: 'false',
+        },{
+           property: 'active-color',
+            description: '开关打开时背景颜色',
+            type: 'string',
+            params: '——',
+            default: '——',
+        }
+        ,{
+           property: 'inactive-color',
+            description: '开关关闭时背景颜色',
+            type: 'string',
+            params: '——',
+            default: '——',
         }];
         return {tableData,Switch1Demo, Switch2Demo};
     }

@@ -9,7 +9,7 @@
         </div>
 
         <ul class="guoguo-menu">
-            <li><router-link to="/doc">文档</router-link></li>
+            <li><a href="https://github.com/ml1234256/guoguo-ui">GitHub</a></li>
         </ul>
         <span v-if="toggleVisible" class="toggle-aside" @click="toggleMenu">
                 <svg class="icon">
@@ -46,7 +46,7 @@ export default defineComponent({
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 14px;
+    padding: 16px;
     position: relative;
     z-index: 20;
     >.guoguo-logo {
@@ -72,7 +72,7 @@ export default defineComponent({
         transform: translateY(-50%);
         display: none;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
         >.guoguo-menu {
             display: none;
         }

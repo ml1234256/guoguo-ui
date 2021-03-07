@@ -3,10 +3,10 @@
    <h1>
         <slot name="title"/>
     </h1>
-    <div class="left">
+    <div class="left" ref="left">
        <slot name="left" />
     </div>
-    <div class="right">
+    <div class="right" v-if="!oneClo">
         <slot name="right"/>
     </div>
     <div class="api-list" v-if="apiList">
@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent,ref } from 'vue';
 import Table from '../lib/Table.vue';
 import TableColumn from '../lib/TableColumn.vue';
 
@@ -36,12 +36,21 @@ export default defineComponent({
     props: {
         apiList: {
             type:Object,
+        },
+        oneClo:{
+            type:Boolean,
+            default: false,
         }
     },
-    setup () {
- 
+    setup (props) {
+        const left = ref<HTMLDivElement>(null);
+        console.log(11,left)
+        if(props.oneClo) {
+            console.log(2, left.value)
+            left.value.style.width='100%';
+        }
         return {
-  
+            left
         };
     }
 })
@@ -71,6 +80,11 @@ h1 {
     width:50%;
     padding: 0 $margin;
     @media(max-width:800px){
+        width:100%;
+    }
+}
+.left {
+    &[onClo]{
         width:100%;
     }
 }

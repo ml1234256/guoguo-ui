@@ -5,6 +5,7 @@
         <section>
                  <Demo :component="Table1Demo" />
         </section>
+    </template>
 </DocLayout>
 </template>
 

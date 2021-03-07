@@ -1,5 +1,5 @@
 <template>
-   <button @click="toggle" class="guoguo-switch" :class="{checked:value}">
+   <button @click="toggle" class="guoguo-switch" :class="{checked:value}" :disabled="disabled">
        <span></span>
    </button>
 </template>
@@ -10,6 +10,10 @@ import { defineComponent } from 'vue'
 export default defineComponent({
     props: {
             value: Boolean,
+            disabled: {
+                type: Boolean,
+                default: false,
+            }
         },
     setup (props, context) {
         const toggle = () => {
@@ -27,6 +31,9 @@ $h2: $h - 4px;
 .guoguo-switch {
     height: $h; width: $h*2; border: none; background-color: #bfbfbf;
     border-radius: $h/2; position: relative; 
+    &[disabled] {
+        cursor:not-allowed;
+    }
     >span {
         position: absolute; top: 2px; left: 2px;
         height: $h2; width: $h2; background-color: #fff;

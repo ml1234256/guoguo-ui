@@ -4,30 +4,30 @@
     <template v-slot:left>
         <section>
             <Demo :component="Button1Demo">
-                设置 theme 为 button,link,text，默认 button
+                通过 theme 属性设置按钮的类型
             </Demo>
         </section>
             
         <section>
             <Demo :component="Button2Demo">
-            设置 size 为 big, small, 默认为normal
+            通过 size 设置按钮的尺寸
             </Demo>
         </section>
         <section>
             <Demo :component="Button3Demo">
-            设置 level 为 main, danger, 默认为普通按钮
+                通过 round 属性设置圆角
             </Demo>
         </section>
     </template>
     <template v-slot:right>
         <section>
             <Demo :component="Button4Demo">
-            设置 disable
+            通过 disabled 属性设置禁用状态
             </Demo>
         </section>
         <section>
             <Demo :component="Button5Demo">
-                loading
+                通过 loading 属性设置加载状态
             </Demo>
         </section>
     </template>
@@ -54,20 +54,20 @@ export default defineComponent({
             property: 'theme',
             description: '设置按钮类型',
             type: 'string',
-            params: 'button/link/text',
-            default: 'button',
+            params: 'primary/success/wraning/danger/link/text',
+            default: 'basic',
         },{
            property: 'size',
             description: '设置按钮尺寸',
             type: 'string',
-            params: 'big/normal/small',
-            default: 'normal',
+            params: 'large/medium/small',
+            default: 'medium',
         },{
-           property: 'level',
-            description: '设置按钮等级',
-            type: 'string',
-            params: 'main/danger',
-            default: 'main',
+           property: 'round',
+            description: '设置圆角',
+            type: 'boolean',
+            params: '——',
+            default: 'false',
         },{
            property: 'disable',
             description: '设置禁用状态',

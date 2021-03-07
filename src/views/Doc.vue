@@ -5,32 +5,32 @@
             <aside v-if="menuVisible" class="guoguo-side-nav">
                 <h2>开发指南</h2>
                 <ul>
-                    <li><router-link to="/doc/intro">介绍</router-link></li>
-                    <li><router-link to="/doc/install">安装</router-link></li>
-                    <li><router-link to="/doc/get-start">快速上手</router-link></li>
+                    <li><router-link to="/intro">介绍</router-link></li>
+                    <li><router-link to="/install">安装</router-link></li>
+                    <li><router-link to="/get-start">快速上手</router-link></li>
                 </ul>
                 <h2>组件列表</h2>
                 <ul>
                     <li>
-                        <router-link to="/doc/button">Button 按钮</router-link>
+                        <router-link to="/button">Button 按钮</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/switch">Switch 开关</router-link>
+                        <router-link to="/switch">Switch 开关</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/dialog">Dialog 对话框</router-link>
+                        <router-link to="/dialog">Dialog 对话框</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/tabs">Tabs 标签页</router-link>
+                        <router-link to="/tabs">Tabs 标签页</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/progress">Progress 进度条</router-link>
+                        <router-link to="/progress">Progress 进度条</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/table">Table 表格</router-link>
+                        <router-link to="/table">Table 表格</router-link>
                     </li>
                     <li>
-                        <router-link to="/doc/card">Card 卡片</router-link>
+                        <router-link to="/card">Card 卡片</router-link>
                     </li>
                 </ul>
             </aside>
@@ -120,7 +120,7 @@ $topnav-background:rgb(11,94,103);
             margin-left:220px;
             padding-top:90px;
             background: inherit;
-            @media (max-width:500px) {
+            @media (max-width:550px) {
                 margin-left: auto;
             }
         }

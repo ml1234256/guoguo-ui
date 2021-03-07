@@ -1,8 +1,20 @@
 <demo>设置尺寸</demo>
 <template>
-<Button size="big">尺寸大</Button>
-        <Button>尺寸普通</Button>
-        <Button size="small">尺寸小</Button>
+    <div>
+        <Button size="large">基础按钮</Button>
+        <Button theme="primary" size="large">主要按钮</Button>
+        <Button theme="danger" size="large">危险按钮</Button>
+</div>
+<div>
+        <Button>基础按钮</Button>
+        <Button theme="primary">主要按钮</Button>
+        <Button theme="danger">危险按钮</Button>
+</div>
+<div>
+        <Button size="small">基础按钮</Button>
+        <Button theme="primary" size="small">主要按钮</Button>
+        <Button theme="danger" size="small">危险按钮</Button>
+</div>
 </template>
 
 <script lang="ts">

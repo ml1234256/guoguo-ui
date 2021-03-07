@@ -2,8 +2,11 @@
 按钮类型
 </demo>
 <template>
-        <Button @click="onClick">普通按钮</Button>
-        <Button theme="button">普通按钮</Button>
+        <Button class="button">基础按钮</Button>
+        <Button theme="primary">主要按钮</Button>
+        <Button theme="success">成功按钮</Button>
+        <Button theme="warning">警告按钮</Button>
+        <Button theme="danger">危险按钮</Button>
         <Button theme="link">连接按钮</Button>
         <Button theme="text">文本按钮</Button>
 </template>
@@ -12,12 +15,6 @@
 import Button from '../../lib/Button.vue';
 
 export default{
-    components: {Button},
-    setup() {
-            const onClick = () => {
-            window.alert('Hi');
-        }
-        return {onClick}
-    }
+    components: {Button}
 }
 </script>

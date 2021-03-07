@@ -1,7 +1,10 @@
 <demo>加载状态</demo>
 <template>
-        <Button loading>加载中</Button>
-        <Button>加载完毕</Button>
+        <Button loading>基础按钮</Button>
+        <Button theme="primary" loading>主要按钮</Button>
+        <Button theme="success" loading>成功按钮</Button>
+        <Button theme="warning" loading>警告按钮</Button>
+        <Button theme="danger" loading>危险按钮</Button>
 </template>
 
 <script lang="ts">

@@ -21,6 +21,7 @@ export default defineComponent({
         }
     },
     setup (props, context) {
+ 
         const selectedItem = ref<HTMLDivElement>(null);
         const indicator = ref<HTMLDivElement>(null);
         const container = ref<HTMLDivElement>(null);
