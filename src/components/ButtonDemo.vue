@@ -4,30 +4,30 @@
     <template v-slot:left>
         <section>
             <Demo :component="Button1Demo">
-                通过 theme 属性设置按钮的类型
+                通过 theme 属性设置按钮的类型。
             </Demo>
         </section>
             
         <section>
             <Demo :component="Button2Demo">
-            通过 size 设置按钮的尺寸
+            通过 size 设置按钮的尺寸。
             </Demo>
         </section>
         <section>
             <Demo :component="Button3Demo">
-                通过 round 属性设置圆角
+                通过 round 属性设置圆角。
             </Demo>
         </section>
     </template>
     <template v-slot:right>
         <section>
             <Demo :component="Button4Demo">
-            通过 disabled 属性设置禁用状态
+            通过 disabled 属性设置禁用状态。
             </Demo>
         </section>
         <section>
             <Demo :component="Button5Demo">
-                通过 loading 属性设置加载状态
+                通过 loading 属性设置加载状态。
             </Demo>
         </section>
     </template>

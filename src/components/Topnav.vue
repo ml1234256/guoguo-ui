@@ -5,6 +5,7 @@
              <svg class="icon">
                     <use xlink:href="#icon-guo"></use>
             </svg>
+            PotUI
             </router-link>
         </div>
 
@@ -51,7 +52,7 @@ export default defineComponent({
     z-index: 20;
     >.guoguo-logo {
         max-width: 6em;
-        font-size:26px;
+        font-size:24px;
         color:#fff;
     }
     >.guoguo-menu{

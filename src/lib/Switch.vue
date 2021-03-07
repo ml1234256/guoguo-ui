@@ -1,11 +1,11 @@
 <template>
-   <button @click="toggle" class="guoguo-switch" :class="{checked:value}" :disabled="disabled">
+   <button @click="toggle" class="guoguo-switch" :class="{checked:value}" :disabled="disabled" ref="button">
        <span></span>
    </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, onUpdated, ref } from 'vue'
 
 export default defineComponent({
     props: {
@@ -13,14 +13,30 @@ export default defineComponent({
             disabled: {
                 type: Boolean,
                 default: false,
+            },
+            activeColor:{
+                type: String,
+                default: "#1890ff",
+            },
+            inactiveColor:{
+                type: String,
+                default: "#bfbfbf",
             }
         },
     setup (props, context) {
+        const button = ref<HTMLDivElement>(null);
         const toggle = () => {
             context.emit("update:value", !props.value);
         }
-
-        return {toggle}
+        const setColor = () => {
+            button.value.style.backgroundColor = props.inactiveColor;
+            if((button.value.className).split(" ").indexOf('checked')>-1){
+                button.value.style.backgroundColor = props.activeColor;
+            }
+        }
+        onMounted(setColor);
+        onUpdated(setColor)
+        return {toggle,button}
     }
 })
 </script>
@@ -30,9 +46,15 @@ $h: 22px;
 $h2: $h - 4px;
 .guoguo-switch {
     height: $h; width: $h*2; border: none; background-color: #bfbfbf;
-    border-radius: $h/2; position: relative; 
+    border-radius: $h/2; position: relative;  margin: 6px;
     &[disabled] {
         cursor:not-allowed;
+        opacity: 0.6;
+        &:active {
+            >span{
+                width: $h2;
+            }
+        }
     }
     >span {
         position: absolute; top: 2px; left: 2px;
@@ -42,11 +64,10 @@ $h2: $h - 4px;
     &:focus { outline: none;}
     &:active {
         >span {
-            width: $h2 + 4px;
+            width: $h2 + 4px;  
         }
     }
     &.checked {
-        background-color: #1890ff;
         >span{
             left: calc(100% - #{$h2} - 2px);
         }
@@ -54,6 +75,14 @@ $h2: $h - 4px;
             >span{
                 width: $h2+4px; margin-left: -4px;
             }
+        }
+        &[disabled] {
+                &:active {
+                    >span{
+                        width: $h2;
+                        margin-left: 0;
+                    }
+                }
         }
     }
 

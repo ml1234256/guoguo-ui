@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref } from 'vue'
+import { defineComponent, computed, ref, onMounted } from 'vue'
 
 
 export default defineComponent({
@@ -34,12 +34,14 @@ export default defineComponent({
     },
     setup (props) {
         const {theme, size, round,loading} = props;
-        let {disabled} = props;
         const button = ref<HTMLDivElement>(null);
-        // if(round){
-        //     const {height} = button.value.getBoundingClientRect();
-        //     button.value.style.borderRadius = Math.round(height/2) + 'px';
-        // }
+        onMounted(() => {
+        if(round){
+            const {height} = button.value.getBoundingClientRect();
+            button.value.style.borderRadius = Math.round(height/2) + 'px';
+        }
+        })
+
         const classes = computed(()=>{
             return {
                 [`guoguo-theme-${theme}`]: theme,
@@ -74,7 +76,7 @@ $disabled: 22%;
     align-items: center;
     white-space: nowrap;
     cursor: pointer;
-    margin:6px 8px;
+    margin:6px 8px 6px 0;
     &:hover, &:focus {
         outline: none;
         color: lighten($blue,$focus);

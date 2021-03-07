@@ -1,7 +1,9 @@
 <demo>设置颜色</demo>
 <template>
-<Progress percentage="80" class="process-bar" />
-<Progress percentage="80" :color="red" class="process-bar" />
+<Progress percentage="20"  />
+<Progress percentage="40" :color="green" />
+<Progress percentage="60" :color="orange" />
+<Progress percentage="80" :color="red" />
 
 </template>
 
@@ -10,14 +12,11 @@ import Progress from '../../lib/Progress.vue';
 
 export default{
     components: {Progress},
-    setup(props) {
+    setup() {
         const red = 'rgb(247,70,104)';
-        return {red};
+        const green = 'rgb(0, 214, 143)';
+        const orange = 'rgb(255, 170, 0)';
+        return {red,green,orange};
     }
 }
 </script>
-<style lang="scss" scoped>
-.process-bar {
-    margin-top:10px;
-}
-</style> 

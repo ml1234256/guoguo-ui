@@ -1,6 +1,11 @@
-<demo>支持禁用</demo>
+<demo>禁用开关</demo>
 <template>  
-        <Switch v-model:value="bool" disabled/>
+    <div>
+        <Switch v-model:value="bool1" disabled/>
+    </div>
+    <div>
+        <Switch v-model:value="bool2" disabled/>
+    </div>
 </template>
 
 <script lang="ts">
@@ -10,8 +15,9 @@ import Switch from '../../lib/Switch.vue';
 export default{
     components: {Switch},
     setup () {
-        const bool = ref(false);
-        return {bool}
+        const bool1 = ref(false);
+        const bool2 = ref(true);
+        return {bool1, bool2}
     }
 }
 </script>

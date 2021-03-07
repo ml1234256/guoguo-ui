@@ -22,9 +22,9 @@ import { ref, onMounted } from 'vue';
             },
             strokeWidth: {
                 type: Number,
-                default: 10,
+                default: 6,
             },
-            fillet: {
+            round: {
                 type: Boolean,
                 default: false,
             },
@@ -34,7 +34,7 @@ import { ref, onMounted } from 'vue';
             }
         },
         setup(props) {
-            let {percentage, color, strokeWidth, fillet, backgroundGrey} = props;
+            let {percentage, color, strokeWidth, round, backgroundGrey} = props;
             const barWrapper = ref<HTMLDivElement>(null);
             const up = ref<HTMLDivElement>(null);
             const down = ref<HTMLDivElement>(null);
@@ -52,7 +52,7 @@ import { ref, onMounted } from 'vue';
                 barWrapper.value.style.height = strokeWidth + 'px';
 
                 const {height} = barWrapper.value.getBoundingClientRect();
-                if (fillet) barWrapper.value.style.borderRadius = Math.round(height/2) + 'px';
+                if (round) barWrapper.value.style.borderRadius = Math.round(height/2) + 'px';
                 
                 if(backgroundGrey) {
                     down.value.style.backgroundColor= 'rgb(237,237,237)';
@@ -71,7 +71,8 @@ import { ref, onMounted } from 'vue';
 .bar-wrapper{
     width: 100%;
     position: relative;
-       overflow: hidden;
+    overflow: hidden;
+    margin: 10px 0;
         >.up {
             height: 100%;
             z-index: 2;
@@ -84,7 +85,7 @@ import { ref, onMounted } from 'vue';
             width: 100%;
             z-index: 1;
             position: absolute;
-            opacity: 0.2;
+            opacity: 0.19;
         }
     }
 
