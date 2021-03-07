@@ -23,6 +23,10 @@ export default defineComponent({
             type:Boolean,
             default: false,
         },
+        circle:{
+            type:Boolean,
+            default: false,
+        },
         disabled: {
             type: Boolean,
             dafault: false,
@@ -33,13 +37,13 @@ export default defineComponent({
         }
     },
     setup (props) {
-        const {theme, size, round,loading} = props;
+        const {theme, size, round, circle, loading} = props;
         const button = ref<HTMLDivElement>(null);
         onMounted(() => {
-        if(round){
-            const {height} = button.value.getBoundingClientRect();
-            button.value.style.borderRadius = Math.round(height/2) + 'px';
-        }
+            if(round){
+                const {height} = button.value.getBoundingClientRect();
+                button.value.style.borderRadius = Math.round(height/2) + 'px';
+            }
         })
 
         const classes = computed(()=>{
@@ -47,6 +51,7 @@ export default defineComponent({
                 [`guoguo-theme-${theme}`]: theme,
                 [`guoguo-size-${size}`]: size,
                 ['guoguo-loading']: loading,
+                ['guoguo-circle']: circle,
             };
         });
         return {classes, button};
@@ -77,6 +82,10 @@ $disabled: 22%;
     white-space: nowrap;
     cursor: pointer;
     margin:6px 8px 6px 0;
+    &.guoguo-circle{
+        width: $h;
+        border-radius: 50%;
+    }
     &:hover, &:focus {
         outline: none;
         color: lighten($blue,$focus);
@@ -206,11 +215,17 @@ $disabled: 22%;
         font-size: 16px;
         height: 40px;
         padding: 0 15px;
+        &.guoguo-circle{
+        width: 40px;
+        }
     }
     &.guoguo-size-small {
         font-size: 12px;
         height: 20px;
         padding: 2px 6px;
+        &.guoguo-circle{
+            width: 20px;
+        }
     }
     &.guoguo-loading{
         cursor:default;

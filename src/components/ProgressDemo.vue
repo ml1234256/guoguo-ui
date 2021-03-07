@@ -83,7 +83,15 @@ export default defineComponent({
             params: '——',
             default: 'false',
         }]
-        return {tableData,Progress1Demo,Progress2Demo,Progress3Demo,Progress4Demo,Progress5Demo,Progress6Demo}
+        return {
+            tableData,
+            Progress1Demo,
+            Progress2Demo,
+            Progress3Demo,
+            Progress4Demo,
+            Progress5Demo,
+            Progress6Demo
+            }
     }
 })
 </script>

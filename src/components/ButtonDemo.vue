@@ -21,6 +21,11 @@
     </template>
     <template v-slot:right>
         <section>
+            <Demo :component="Button6Demo">
+            通过 disabled 属性设置禁用状态。
+            </Demo>
+        </section>
+        <section>
             <Demo :component="Button4Demo">
             通过 disabled 属性设置禁用状态。
             </Demo>
@@ -43,6 +48,7 @@ import Button2Demo from './ButtonDemo/Button2.demo.vue';
 import Button3Demo from './ButtonDemo/Button3.demo.vue';
 import Button4Demo from './ButtonDemo/Button4.demo.vue';
 import Button5Demo from './ButtonDemo/Button5.demo.vue';
+import Button6Demo from './ButtonDemo/Button6.demo.vue';
 import Table from '../lib/Table.vue';
 import TableColumn from '../lib/TableColumn.vue';
 import DocLayout from './DocLayout.vue';
@@ -87,7 +93,8 @@ export default defineComponent({
             Button2Demo,
             Button3Demo,
             Button4Demo,
-            Button5Demo
+            Button5Demo,
+            Button6Demo
         };
     }
 })
