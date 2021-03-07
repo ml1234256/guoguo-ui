@@ -9,9 +9,15 @@
     <div class="right">
         <slot name="right"/>
     </div>
-    <div class="api-list" v-if="api">
+    <div class="api-list" v-if="apiList">
         <h3>API</h3>
-        <slot name="api" />
+         <Table :data="apiList">
+            <TableColumn prop="property" label="参数"/>
+            <TableColumn prop="description" label="介绍"/>
+            <TableColumn prop="type" label="类型"/>
+            <TableColumn prop="params" label="可选值"/>
+            <TableColumn prop="default" label="默认"/>
+        </Table>
     </div> 
 
 </div>
@@ -21,13 +27,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Table from '../lib/Table.vue';
+import TableColumn from '../lib/TableColumn.vue';
 
 
 export default defineComponent({
+    components:{Table,TableColumn},
     props: {
-        api:{
-            type: Boolean,
-            default: false,
+        apiList: {
+            type:Object,
         }
     },
     setup () {

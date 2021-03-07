@@ -1,6 +1,5 @@
 <demo>设置内容</demo>
 <template>
-<h3>设置内容</h3>
 <Progress percentage="30" :stroke-width='35' class="process-bar">
     <h4>primary</h4>
 </Progress>

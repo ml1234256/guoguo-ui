@@ -1,19 +1,23 @@
 <template>
-    <div>
-<Table />
-    </div>
+ <DocLayout>
+    <template v-slot:title>Table 表格</template>
+    <template v-slot:left>
+        <section>
+                 <Demo :component="Table1Demo" />
+        </section>
+</DocLayout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Table from '../lib/Table.vue';
+import Demo from './Demo.vue';
+import DocLayout from './DocLayout.vue';
+import Table1Demo from './TableDemo/Table1.demo.vue'
 
 export default defineComponent({
-    components: {Table},
-    setup () {
-        
-
-        return {}
+    components: {Demo, DocLayout},
+    setup() {
+        return {Table1Demo}
     }
 })
 </script>

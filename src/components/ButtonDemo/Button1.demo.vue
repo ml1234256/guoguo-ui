@@ -12,6 +12,12 @@
 import Button from '../../lib/Button.vue';
 
 export default{
-    components: {Button}
+    components: {Button},
+    setup() {
+            const onClick = () => {
+            window.alert('Hi');
+        }
+        return {onClick}
+    }
 }
 </script>

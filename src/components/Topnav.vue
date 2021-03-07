@@ -52,6 +52,7 @@ export default defineComponent({
     >.guoguo-logo {
         max-width: 6em;
         font-size:26px;
+        color:#fff;
     }
     >.guoguo-menu{
         display: flex;

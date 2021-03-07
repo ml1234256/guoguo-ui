@@ -1,6 +1,5 @@
 <demo>设置颜色</demo>
 <template>
-<h3>设置颜色</h3>
 <Progress percentage="80" class="process-bar" />
 <Progress percentage="80" :color="red" class="process-bar" />
 

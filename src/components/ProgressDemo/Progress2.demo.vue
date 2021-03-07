@@ -1,6 +1,5 @@
 <demo>设置圆角</demo>
 <template>
-<h3>设置圆角</h3>
 <Progress percentage="80" fillet class="process-bar" />
 </template>
 

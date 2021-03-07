@@ -1,6 +1,5 @@
 <demo>底部条置成灰色</demo>
 <template>
-<h3>底部条置成灰色</h3>
 <Progress percentage="80" background-grey class="process-bar" />
 </template>
 
