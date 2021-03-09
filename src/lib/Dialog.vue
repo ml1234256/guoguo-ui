@@ -11,9 +11,9 @@
                     <main>
                         <slot name="content" />
                     </main>
-                    <footer>
-                        <Button level="main" @click="ok">OK</Button>
+                    <footer v-if="footer">
                         <Button @click="cancel">Cancel</Button>
+                        <Button theme="primary" @click="ok">OK</Button>
                     </footer>
                 </div>
             </div>
@@ -36,6 +36,10 @@ export default defineComponent({
         closeOnClickOverlay: {
             type: Boolean,
             default: true,
+        },
+        footer:{
+            type: Boolean,
+            default:true,
         },
         ok: {
             type:Function
@@ -103,10 +107,10 @@ $border-color: #d9d9d9;
         font-size: 20px;
     }
     >main {
-        padding: 1.5em 16px;
+        padding: 2em 16px;
     }
     >footer {
-        padding: 12px 16px;
+        padding: 8px;
         border-top: 1px solid $border-color;
         text-align: right;
     }

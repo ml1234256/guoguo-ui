@@ -1,8 +1,8 @@
-<demo>常规用法</demo>
+<demo>设置是否击遮罩层关闭</demo>
 <template>  
-        <Button @click="toggle">打开对话框</Button>
-        <Dialog v-model:visible="x">
-            <template v-slot:title>
+        <Button @click="toggle">禁止点击遮罩层关闭</Button>
+        <Dialog v-model:visible="x"  :closeOnClickOverlay="false">
+          <template v-slot:title>
                 <strong>登黄雀楼</strong>
             </template>
             <template v-slot:content>
@@ -22,7 +22,7 @@ import Button from '../../lib/Button.vue';
 export default{
     components: {Dialog, Button},
     setup () {
-         const x = ref(false);
+        const x = ref(false);
         const toggle = ()=>{
            x.value = !x.value;
         }

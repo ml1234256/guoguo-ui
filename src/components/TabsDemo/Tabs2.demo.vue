@@ -1,9 +1,9 @@
-<demo>常规用法</demo>
+<demo>设置禁用</demo>
 <template>
     <div>
     <Tabs v-model:selected="selected" class="guoguo-tabs">
         <Tab title="导航1">今天吃肯德基</Tab>
-        <Tab title="导航2">明天吃麦当劳</Tab>
+        <Tab title="导航2" disabled>明天吃麦当劳</Tab>
     </Tabs>
     </div>
 </template>
@@ -16,7 +16,7 @@ import Tab from '../../lib/Tab.vue';
 export default {
     components: {Tabs, Tab},
     setup () {
-        const selected = ref('导航2');
+        const selected = ref('导航1');
 
         return {selected}
     }

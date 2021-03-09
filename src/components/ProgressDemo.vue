@@ -52,7 +52,7 @@ import Progress6Demo from './ProgressDemo/Progress6.demo.vue';
 export default defineComponent({
     components: {Demo, DocLayout},
     setup () {
-        let tableData = [{
+        const tableData = [{
             property: 'percentage',
             description: '设置百分比',
             type: 'number',

@@ -21,7 +21,7 @@ import Card1Demo from './CardDemo/Card1.demo.vue'
 export default defineComponent({
     components: {Demo, DocLayout},
     setup () {
-        let tableData = [{
+        const tableData = [{
             property: 'header',
             description: '设置卡片头文字',
             type: 'string',

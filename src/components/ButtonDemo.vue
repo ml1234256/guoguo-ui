@@ -22,7 +22,7 @@
     <template v-slot:right>
         <section>
             <Demo :component="Button6Demo">
-            通过 disabled 属性设置禁用状态。
+            通过 circle 设置圆形按钮。
             </Demo>
         </section>
         <section>
@@ -56,7 +56,7 @@ import DocLayout from './DocLayout.vue';
 export default defineComponent({
     components: {Demo, DocLayout,Table,TableColumn},
     setup () {
-        let tableData = [{
+        const tableData = [{
             property: 'theme',
             description: '设置按钮类型',
             type: 'string',
@@ -71,6 +71,12 @@ export default defineComponent({
         },{
            property: 'round',
             description: '设置圆角',
+            type: 'boolean',
+            params: '——',
+            default: 'false',
+        },{
+           property: 'circle',
+            description: '圆形按钮',
             type: 'boolean',
             params: '——',
             default: 'false',

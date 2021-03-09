@@ -1,10 +1,10 @@
 <template>
     <div class="guoguo-tabs">
         <div class="guoguo-tabs-nav" ref="container">
-            <div class="guoguo-tabs-nav-item" v-for="(t, index) in titles" :ref="el => {if (t === selected) selectedItem = el}" @click="select(t)" :class="{selected: t===selected}" :key="index">{{t}}</div>
+            <div class="guoguo-tabs-nav-item" v-for="(t, index) in titles" :ref="el => {if (t === selected) selectedItem = el}" @click="select(t)" :class="{selected: t===selected}" :key="index" :disabled="disabled">{{t}}</div>
             <div class="guoguo-tabs-nav-indicator" ref="indicator"></div>
         </div>
-        <div class="guoguo-tabs-content">
+        <div class="guoguo-tabs-content" ref="content">
             <component :is="current" :key="current.props.title" />
         </div>
     </div>
@@ -18,6 +18,14 @@ export default defineComponent({
     props: {
         selected: {
             type: String
+        },
+        disabled: {
+                type: Boolean,
+                default: false,
+        },
+        center: {
+            teyp: Boolean,
+            default:false,
         }
     },
     setup (props, context) {
@@ -25,6 +33,7 @@ export default defineComponent({
         const selectedItem = ref<HTMLDivElement>(null);
         const indicator = ref<HTMLDivElement>(null);
         const container = ref<HTMLDivElement>(null);
+        const content = ref<HTMLDivElement>(null);
         const updateIndicator = () => {
             const {width} = selectedItem.value.getBoundingClientRect();
             indicator.value.style.width = width + 'px';
@@ -33,7 +42,13 @@ export default defineComponent({
             const left = left2 - left1;
             indicator.value.style.left = left + 'px';
         }
-        onMounted(updateIndicator);
+        onMounted(() =>{
+            if(props.center) {
+                container.value.style.justifyContent="center";
+                content.value.style.textAlign = "center";
+            }
+            updateIndicator();
+        });
         onUpdated(updateIndicator);
         const defaults = context.slots.default();
         defaults.forEach((tag) => {
@@ -49,7 +64,15 @@ export default defineComponent({
         const select = (title: string) => {
             context.emit('update:selected', title)
         }
-        return {current, defaults, titles, select, selectedItem, indicator, container}
+        return {
+            current, 
+            defaults, 
+            titles, 
+            select, 
+            selectedItem, 
+            indicator, 
+            container,
+            content}
     }
 })
 </script>
@@ -69,8 +92,9 @@ $border-color: #d9d9d9;
             padding: 8px 0;
             margin: 0 16px;
             cursor: pointer;
-            // &:first-child {
-            //     margin-left: 0;
+            // &[disabled] {
+            //  cursor:not-allowed;
+            // opacity: 0.6;
             // }
             &.selected {
                 color: $blue;

@@ -12,9 +12,9 @@ import Progress from '../../lib/Progress.vue';
 export default{
     components: {Progress},
     setup() {
-        const green = 'rgb(0, 214, 143)';
-        const orange = 'rgb(255, 170, 0)';
-        const red = 'rgb(247,70,104)';
+        const red = '#F74668';
+        const green = '#00D68F';
+        const orange = '#FFAA00';
         return {green,orange,red};
     }
 }

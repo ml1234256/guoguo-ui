@@ -35,7 +35,7 @@ import DocLayout from './DocLayout.vue';
 export default defineComponent({
     components:{ Demo, DocLayout},
     setup () {
-        let tableData = [{
+        const tableData = [{
             property: 'value/v-model',
             description: '绑定值',
             type: 'boolean/string/number',

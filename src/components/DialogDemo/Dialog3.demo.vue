@@ -1,7 +1,7 @@
-<demo>常规用法</demo>
+<demo>取消底部按钮</demo>
 <template>  
-        <Button @click="toggle">打开对话框</Button>
-        <Dialog v-model:visible="x">
+        <Button @click="toggle" :footer="false">无底部按钮</Button>
+        <Dialog v-model:visible="x" :footer="false">
             <template v-slot:title>
                 <strong>登黄雀楼</strong>
             </template>

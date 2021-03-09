@@ -10,7 +10,7 @@
         </div>
 
         <ul class="guoguo-menu">
-            <li><a href="https://github.com/ml1234256/guoguo-ui">GitHub</a></li>
+            <li><a href="https://github.com/ml1234256/guoguo-ui" target="_blank">GitHub</a></li>
         </ul>
         <span v-if="toggleVisible" class="toggle-aside" @click="toggleMenu">
                 <svg class="icon">
