@@ -18,7 +18,7 @@ import { ref, onMounted } from 'vue';
             },
             color: {
                 type: String,
-                default: 'rgb(64,142,208)',
+                default: '#408ED0',
             },
             strokeWidth: {
                 type: Number,

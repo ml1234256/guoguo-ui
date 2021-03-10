@@ -4,6 +4,7 @@
     <Tabs v-model:selected="selected" class="guoguo-tabs">
         <Tab title="导航1">今天吃肯德基</Tab>
         <Tab title="导航2" disabled>明天吃麦当劳</Tab>
+        <Tab title="导航3">后天吃必胜客</Tab>
     </Tabs>
     </div>
 </template>

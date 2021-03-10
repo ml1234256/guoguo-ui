@@ -1,7 +1,13 @@
 <template>
     <div class="guoguo-tabs">
         <div class="guoguo-tabs-nav" ref="container">
-            <div class="guoguo-tabs-nav-item" v-for="(t, index) in titles" :ref="el => {if (t === selected) selectedItem = el}" @click="select(t)" :class="{selected: t===selected}" :key="index" :disabled="disabled">{{t}}</div>
+            <div 
+                class="guoguo-tabs-nav-item" 
+                v-for="(t, index) in titles" 
+                :ref="el => {if (t === selected) selectedItem = el}" 
+                @click="select(t)" 
+                :class="{selected: t===selected}" 
+                :key="index">{{t}}</div>
             <div class="guoguo-tabs-nav-indicator" ref="indicator"></div>
         </div>
         <div class="guoguo-tabs-content" ref="content">
@@ -18,10 +24,6 @@ export default defineComponent({
     props: {
         selected: {
             type: String
-        },
-        disabled: {
-                type: Boolean,
-                default: false,
         },
         center: {
             teyp: Boolean,
@@ -78,7 +80,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$blue: #40a9ff;
+$blue: #1890ff;
 $text-color: #333;
 $border-color: #d9d9d9;
 
@@ -92,13 +94,14 @@ $border-color: #d9d9d9;
             padding: 8px 0;
             margin: 0 16px;
             cursor: pointer;
-            // &[disabled] {
-            //  cursor:not-allowed;
-            // opacity: 0.6;
-            // }
             &.selected {
                 color: $blue;
+                color:#ccc;
             }
+            // &.disabled{
+            //     cursor: not-allowed,
+
+            // }
         }
         &-indicator {
             position: absolute;

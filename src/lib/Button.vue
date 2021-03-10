@@ -1,6 +1,6 @@
 <template>
     <button class="guoguo-button" :class="classes" :disabled="disabled" ref="button">
-        <span v-if="loading" class="guoguo-loadingIndicator"></span>
+        <span v-if="loading" class="guoguo-loadingIndicator" ref="loadingIndicator"></span>
         <slot />
     </button>
 </template>
@@ -39,10 +39,16 @@ export default defineComponent({
     setup (props) {
         const {theme, size, round, circle, loading} = props;
         const button = ref<HTMLDivElement>(null);
+        const loadingIndicator = ref<HTMLDivElement>(null);
         onMounted(() => {
             if(round){
                 const {height} = button.value.getBoundingClientRect();
                 button.value.style.borderRadius = Math.round(height/2) + 'px';
+            }
+            if(loading && button.value.className.split(" ").indexOf('guoguo-theme-basic')>-1){
+                console.log(loadingIndicator.value)
+                loadingIndicator.value.style.borderColor = "#ddd";
+                loadingIndicator.value.style.borderLeft = "transparent";
             }
         })
 
@@ -54,7 +60,7 @@ export default defineComponent({
                 ['guoguo-circle']: circle,
             };
         });
-        return {classes, button};
+        return {classes, button, loadingIndicator};
     },
 });
 </script>
