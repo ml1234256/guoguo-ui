@@ -1,17 +1,33 @@
 <template>
     <div class="card">
-Card
+        <div v-if="header" class="header" ref="head">{{header}}</div>
+        <div class="content">
+            <slot />
+        </div>
+        
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 
 export default defineComponent({
-    setup () {
-        
-
-        return {}
+    props: {
+        header: {
+            type: String,
+        },
+        headerStyle: {
+            type: Object,
+            dafault: {padding: "8px 16px"}
+        }
+    },
+    setup (props) {
+        const {headerStyle} = props;
+        const head = ref<HTMLDivElement>(null);
+        onMounted(() => { 
+            console.log(headerStyle)
+        }) 
+        return {head}
     }
 })
 </script>
@@ -23,6 +39,13 @@ export default defineComponent({
     border-radius: 4px;
     text-align: left;
     background: #fff;
-    padding: 0px 16px;
+   
+}
+.content {
+ padding: 1em 16px;
+}
+.header {
+    font-size: 20px;
+    border-bottom: 1px solid #ebebeb;
 }
 </style>

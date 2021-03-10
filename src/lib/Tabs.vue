@@ -96,12 +96,12 @@ $border-color: #d9d9d9;
             cursor: pointer;
             &.selected {
                 color: $blue;
-                color:#ccc;
             }
             // &.disabled{
-            //     cursor: not-allowed,
+            //     cursor: not-allowed
+            //     color: #ccc
 
-            // }
+            //  }
         }
         &-indicator {
             position: absolute;

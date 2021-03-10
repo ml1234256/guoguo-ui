@@ -47,7 +47,7 @@ export default defineComponent({
             }
             if(loading && button.value.className.split(" ").indexOf('guoguo-theme-basic')>-1){
                 console.log(loadingIndicator.value)
-                loadingIndicator.value.style.borderColor = "#ddd";
+                loadingIndicator.value.style.borderColor = "#d9d9d9";
                 loadingIndicator.value.style.borderLeft = "transparent";
             }
         })

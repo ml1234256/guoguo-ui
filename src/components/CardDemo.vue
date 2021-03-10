@@ -1,22 +1,42 @@
 <template>
-    <div>
-<Card />
-    </div>
     <DocLayout :api-list="tableData">
     <template v-slot:title>Card 对话框</template>
     <template v-slot:left>
         <section>
             <Demo :component="Card1Demo" />
         </section>
+        <section>
+            <Demo :component="Card2Demo">
+                通过 header 属性设置卡片头文字
+                通过 header-style 属性设置卡片头样式
+            </Demo>
+        </section>
+
     </template>
-</DocLayout>
+    <template v-slot:right>
+        <section>
+            <Demo :component="Card3Demo">
+            通过 body-style 属性设置卡片内容样式
+            </Demo>
+        </section>
+        <section>
+            <Demo :component="Card4Demo">
+                通过 header 属性设置卡片头文字
+                通过 header-style 属性设置卡片头样式
+            </Demo>
+        </section>
+    </template>
+    </DocLayout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
-import Card1Demo from './CardDemo/Card1.demo.vue'
+import Card1Demo from './CardDemo/Card1.demo.vue';
+import Card2Demo from './CardDemo/Card2.demo.vue';
+import Card3Demo from './CardDemo/Card3.demo.vue';
+import Card4Demo from './CardDemo/Card4.demo.vue';
 
 export default defineComponent({
     components: {Demo, DocLayout},
@@ -41,7 +61,13 @@ export default defineComponent({
             default: '——',
         }];
 
-        return {tableData, Card1Demo}
+        return {
+            tableData, 
+            Card1Demo, 
+            Card2Demo, 
+            Card3Demo,
+            Card4Demo
+            }
     }
 })
 </script>

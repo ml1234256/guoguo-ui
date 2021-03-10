@@ -1,6 +1,6 @@
-<demo>常规用法</demo>
+<demo>设置卡片头文字与样式</demo>
 <template>  
-    <Card>
+    <Card header="Card Title">
         card content ... <br />
         card content ... <br />
         card content ... <br />

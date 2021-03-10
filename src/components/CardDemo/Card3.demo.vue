@@ -1,6 +1,6 @@
-<demo>常规用法</demo>
+<demo>设置卡片内容样式</demo>
 <template>  
-    <Card>
+    <Card header="Card Title" body-style="{color:‘red’}">
         card content ... <br />
         card content ... <br />
         card content ... <br />
