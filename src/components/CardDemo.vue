@@ -7,7 +7,7 @@
         </section>
         <section>
             <Demo :component="Card2Demo">
-                通过 header 属性设置卡片头文字
+                通过 header 属性设置卡片头文字 <br />
                 通过 header-style 属性设置卡片头样式
             </Demo>
         </section>
@@ -21,8 +21,7 @@
         </section>
         <section>
             <Demo :component="Card4Demo">
-                通过 header 属性设置卡片头文字
-                通过 header-style 属性设置卡片头样式
+                自定义卡片内容
             </Demo>
         </section>
     </template>

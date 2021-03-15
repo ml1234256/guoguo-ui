@@ -7,11 +7,6 @@
                 通过 v-model 绑定一个 Boolean 类型的变量。
             </Demo>
         </section>
-                <section>
-            <Demo :component="Tabs3Demo">
-                通过 center 属性设置居中显示
-            </Demo>
-        </section>
     </template>
     <template v-slot:right>
         <section>
@@ -29,7 +24,6 @@ import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 import Tabs1Demo from './TabsDemo/Tabs1.demo.vue';
 import Tabs2Demo from './TabsDemo/Tabs2.demo.vue';
-import Tabs3Demo from './TabsDemo/Tabs3.demo.vue';
 
 export default defineComponent({
     components: {Demo, DocLayout},
@@ -46,14 +40,8 @@ export default defineComponent({
             type: 'object',
             params: '——',
             default: '——',
-        },{
-           property: 'center',
-            description: '设置居中',
-            type: 'boolean',
-            params: '——',
-            default: 'false',
         }];
-        return {tableData, Tabs1Demo, Tabs2Demo, Tabs3Demo}
+        return {tableData, Tabs1Demo, Tabs2Demo}
     }
 })
 </script>

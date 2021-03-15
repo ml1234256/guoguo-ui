@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent,ref } from 'vue';
+import { defineComponent,onMounted,ref } from 'vue';
 import Table from '../lib/Table.vue';
 import TableColumn from '../lib/TableColumn.vue';
 
@@ -45,10 +45,12 @@ export default defineComponent({
     setup (props) {
         const left = ref<HTMLDivElement>(null);
         console.log(11,left)
-        if(props.oneClo) {
-            console.log(2, left.value)
-            left.value.style.width='100%';
-        }
+        onMounted(() => {
+            if(props.oneClo) {
+                console.log(2, left.value)
+                left.value.style.width='100%';
+            }
+        })
         return {
             left
         };
@@ -102,6 +104,4 @@ h1 {
             font-size:20px;
         }
 }
-
-
 </style>

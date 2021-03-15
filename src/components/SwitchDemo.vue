@@ -1,5 +1,5 @@
 <template>
-<DocLayout :apiList="tableData">
+<DocLayout :api-list="tableData">
     <template v-slot:title>Switch 开关</template>
     <template v-slot:left>
         <section>

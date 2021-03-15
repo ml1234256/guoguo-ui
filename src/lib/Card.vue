@@ -42,7 +42,7 @@ export default defineComponent({
    
 }
 .content {
- padding: 1em 16px;
+ padding: 16px;
 }
 .header {
     font-size: 20px;

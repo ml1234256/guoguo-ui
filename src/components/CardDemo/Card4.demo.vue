@@ -1,7 +1,8 @@
 <demo>图片卡</demo>
 <template>  
-    <Card>
+    <Card class="card">
         <img src="../../assets/mdl.jpg" class="image" />
+        <h3>McDonald's</h3>
     </Card>
 </template>
 <script lang="ts">
@@ -14,6 +15,9 @@ export default{
 
 <style lang="scss" scope>
 .image {
-    width: 80%
+    width: 100%;
+}
+h3 {
+    margin-top:16px;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
- <DocLayout>
+ <DocLayout :api-list="tableData" oneClo>
     <template v-slot:title>Table 表格</template>
     <template v-slot:left>
         <section>
-                 <Demo :component="Table1Demo" />
+            <Demo :component="Table1Demo" />
         </section>
     </template>
 </DocLayout>
@@ -18,11 +18,20 @@ import Table1Demo from './TableDemo/Table1.demo.vue'
 export default defineComponent({
     components: {Demo, DocLayout},
     setup() {
-        return {Table1Demo}
+        const tableData = [{
+            property: 'data',
+            description: '显示的数据',
+            type: 'array',
+            params: '——',
+            default: '——',
+        }]
+        return {Table1Demo,tableData}
     }
 })
 </script>
 
 <style scoped>
-
+section {
+    margin-bottom:24px;
+}
 </style>

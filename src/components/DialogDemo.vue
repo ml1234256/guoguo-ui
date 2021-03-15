@@ -16,7 +16,7 @@
     <template v-slot:right>
         <section>
                     <Demo :component="Dialog3Demo">
-                       通过 footer 设置是否显示底部按钮
+                       通过 footer 属性取消底部按钮
                     </Demo>
         </section>
     </template>
