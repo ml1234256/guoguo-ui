@@ -51,7 +51,7 @@ export default defineComponent({
             description: '设置垂直分割线',
             type: 'boolean',
             params: '——',
-            default: '——',
+            default: 'false',
         },{
             property: 'orientation',
             description: '设置分割线标题的位置',

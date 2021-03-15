@@ -1,5 +1,6 @@
 <template>
     <div class="divider" :class="classes" ref="divider">
+        <div v-if="!vertical" class="divider-text" :class="`is-${orientation}`"><slot /></div>
     </div>
 </template>
 
@@ -19,10 +20,14 @@ export default defineComponent({
         color: {
             type: String,
             default: '#DCDFE6'
+        },
+        orientation: {
+            type: String,
+            default: 'left'
         }
     },
     setup (props) {
-        const {dashed, vertical, color} = props;
+        const {dashed, vertical, color, orientation} = props;
         const divider = ref<HTMLDivElement>(null);
         const classes = computed(()=>{
             return {
@@ -47,12 +52,36 @@ export default defineComponent({
     width:100%;
     height:1px;
     border: none;
-    //background-color: #DCDFE6;
     margin: 24px 0;
+    position: relative;
     &-dashed {
-       //background: none;
         border-style: dashed;
         border-width: 1px 0 0;
     }
+    &-vertical {
+        display: inline-block;
+        width: 1px;
+        height: 1em;
+        border: none;
+        margin: 0 8px;
+    }
+    &-text{
+        position:absolute;
+        transform: translateY(-50%);
+        background: #fff;
+        padding: 0 20px;
+        font-size: 14px;
+        &.is-left{
+        left: 20px;
+        }
+        &.is-center{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.is-right{
+            right: 20px;
+        }
+    }
+
 }
 </style>

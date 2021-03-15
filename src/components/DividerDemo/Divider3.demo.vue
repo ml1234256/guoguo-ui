@@ -1,6 +1,8 @@
 <demo>垂直分割线</demo>
 <template>  
-鹅鹅鹅，曲项向天歌
+鹅鹅鹅
+<Divider vertical></Divider>
+曲项向天歌
 <Divider vertical></Divider>
 白毛浮绿水
 <Divider vertical></Divider>

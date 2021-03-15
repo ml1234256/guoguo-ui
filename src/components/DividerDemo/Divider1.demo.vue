@@ -15,7 +15,7 @@ import Divider from '../../lib/Divider.vue';
 export default{
     components: {Divider},
     setup () {
-         const x = ref(false);
+        const x = ref(false);
         const toggle = ()=>{
            x.value = !x.value;
         }
