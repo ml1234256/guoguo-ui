@@ -51,13 +51,13 @@ export default defineComponent({
             description: '设置卡片头样式',
             type: 'object',
             params: '——',
-            default: '——',
+            default: '{padding: 8px 16px}',
         },{
            property: 'body-style',
             description: '设置卡片内容样式',
             type: 'object',
             params: '——',
-            default: '——',
+            default: '{padding: 16px}',
         }];
 
         return {

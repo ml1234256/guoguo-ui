@@ -1,10 +1,9 @@
 <template>
     <div class="card">
-        <div v-if="header" class="header" ref="head">{{header}}</div>
-        <div class="content">
+        <div v-if="header" class="header" ref="cardHeader">{{header}}</div>
+        <div class="content" ref="cardBody">
             <slot />
         </div>
-        
     </div>
 </template>
 
@@ -18,32 +17,44 @@ export default defineComponent({
         },
         headerStyle: {
             type: Object,
-            dafault: {padding: "8px 16px"}
+            default: {}
+        },
+        bodyStyle: {
+            type: Object,
+            default: {}
         }
     },
     setup (props) {
-        const {headerStyle} = props;
-        const head = ref<HTMLDivElement>(null);
+        const {headerStyle, bodyStyle} = props;
+        const cardHeader = ref<HTMLDivElement>(null);
+        const cardBody = ref<HTMLDivElement>(null);
         onMounted(() => { 
-            console.log(headerStyle)
-        }) 
-        return {head}
+            if (cardHeader.value) cardHeader.value.style.padding =  "8px 16px";
+            cardBody.value.style.padding = "16px";
+            Object.keys(headerStyle).forEach(key => {
+                   if (cardHeader.value) {
+                       cardHeader.value.style[key] = headerStyle[key]
+                   };
+             })
+            Object.keys(bodyStyle).forEach(key => {
+                cardBody.value.style[key] = bodyStyle[key]
+             })
+            })
+        return {cardHeader, cardBody}
     }
 })
 </script>
 
 <style lang="scss"scoped>
 .card {
-    border: 1px solid #d9d9d9;
-    box-shadow: 0 4px 6px #ebebeb;
+    border: 1px solid rgb(235, 238, 245);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     text-align: left;
     background: #fff;
    
 }
-.content {
- padding: 16px;
-}
+
 .header {
     font-size: 20px;
     border-bottom: 1px solid #ebebeb;

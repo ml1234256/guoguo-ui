@@ -1,6 +1,6 @@
 <demo>图片卡</demo>
 <template>  
-    <Card class="card">
+    <Card class="card" :body-style="{padding: 0}">
         <img src="../../assets/mdl.jpg" class="image" />
         <h3>McDonald's</h3>
     </Card>
@@ -18,6 +18,6 @@ export default{
     width: 100%;
 }
 h3 {
-    margin-top:16px;
+    margin:16px;
 }
 </style>

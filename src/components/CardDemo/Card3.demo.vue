@@ -1,6 +1,6 @@
 <demo>设置卡片内容样式</demo>
 <template>  
-    <Card header="Card Title" body-style="{color:‘red’}">
+    <Card header="Card Title" :body-style="{color:'red'}">
         card content ... <br />
         card content ... <br />
         card content ... <br />

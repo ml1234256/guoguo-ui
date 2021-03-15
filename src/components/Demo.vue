@@ -47,30 +47,32 @@ $border-color: #ebebeb;
 $border-radius: 4px;
 
 .demo{
-    //border: 1px solid $border-color;
     box-shadow: 0 4px 6px #ebebeb;
     border-radius: $border-radius;
     text-align: left;
     background: #fff;
-    padding: 0px 16px;
+    //padding: 0px 16px;
     >h3{
         font-size: 20px;
-        padding: 8px 0;
+        padding: 8px 16px;
         border-bottom: 1px solid $border-color;
+        margin: 0;
     }
     >.intro {
-        padding: 1em 0;
+        padding: 1em 16px;
         font-size: 14px;
     }
     &-component{
         padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     &-actions {
-        padding: 8px 0;
+        padding: 8px 16px;
         border-top: 1px dashed $border-color;
     }
     &-code {
-        padding: 8px 0;
+        padding: 8px 16px;
         border-top: 1px dashed $border-color;
         > pre {
             line-height: 1.1;

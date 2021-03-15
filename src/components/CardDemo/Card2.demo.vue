@@ -6,7 +6,7 @@
         card content ... <br />
         card content ... <br />
     </Card>
-    <Card header="Card Title" headerStyle="{color:'red'}">
+    <Card header="Card Title" :headerStyle="{color:'red', padding: '20px'}">
         card content ... <br />
         card content ... <br />
         card content ... <br />
