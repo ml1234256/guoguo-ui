@@ -64,6 +64,7 @@ export default defineComponent({
         height: 1em;
         border: none;
         margin: 0 8px;
+        vertical-align: middle;
     }
     &-text{
         position:absolute;

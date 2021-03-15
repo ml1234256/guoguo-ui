@@ -3,11 +3,11 @@
         <div class="guoguo-tabs-nav" ref="container">
             <div 
                 class="guoguo-tabs-nav-item" 
-                v-for="(t, index) in titles" 
-                :ref="el => {if (t === selected) selectedItem = el}" 
-                @click="select(t)" 
-                :class="{selected: t===selected}" 
-                :key="index">{{t}}</div>
+                v-for="(node, index) in defaults" 
+                :ref="el => {if (node.props.title === selected) selectedItem = el}" 
+                @click="select(node)" 
+                :class="[node.props.title===selected ? 'selected' : '', node.props.disabled === '' ? 'disabled' : '']" 
+                :key="index">{{node.props.title}}</div>
             <div class="guoguo-tabs-nav-indicator" ref="indicator"></div>
         </div>
         <div class="guoguo-tabs-content" ref="content">
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, watchEffect, onMounted, onUpdated } from 'vue';
+import { defineComponent, ref, computed, onMounted, onUpdated } from 'vue';
 import Tab from './Tab.vue';
 
 export default defineComponent({
@@ -31,28 +31,16 @@ export default defineComponent({
         }
     },
     setup (props, context) {
- 
+        let {selected} = props;
         const selectedItem = ref<HTMLDivElement>(null);
         const indicator = ref<HTMLDivElement>(null);
         const container = ref<HTMLDivElement>(null);
         const content = ref<HTMLDivElement>(null);
-        const updateIndicator = () => {
-            const {width} = selectedItem.value.getBoundingClientRect();
-            indicator.value.style.width = width + 'px';
-            const {left: left1} = container.value.getBoundingClientRect();
-            const {left: left2} = selectedItem.value.getBoundingClientRect();
-            const left = left2 - left1;
-            indicator.value.style.left = left + 'px';
-        }
-        onMounted(() =>{
-            if(props.center) {
-                container.value.style.justifyContent="center";
-                content.value.style.textAlign = "center";
-            }
-            updateIndicator();
-        });
-        onUpdated(updateIndicator);
         const defaults = context.slots.default();
+        const select = (node) => {
+            if(node.props.disabled === '') return;
+            context.emit('update:selected', node.props.title)
+        }
         defaults.forEach((tag) => {
             if (tag.type !== Tab) {
                 throw new Error('Tabs 子标签必须是 Tab')
@@ -63,9 +51,24 @@ export default defineComponent({
             return defaults.find(tag => tag.props.title === props.selected)
         })
         const titles = defaults.map(tag => tag.props.title)
-        const select = (title: string) => {
-            context.emit('update:selected', title)
+        const updateIndicator = () => {
+            const {width} = selectedItem.value.getBoundingClientRect();
+            indicator.value.style.width = width + 'px';
+            const {left: left1} = container.value.getBoundingClientRect();
+            const {left: left2} = selectedItem.value.getBoundingClientRect();
+            const left = left2 - left1;
+            indicator.value.style.left = left + 'px';
         }
+        onMounted(() => {
+            // defaults.forEach((node) => {
+            //     if(node.props.disabled === '' && selected === node.props.title) {
+            //         selected = defaults[0].props.title;
+            //     }
+            // })
+            updateIndicator();
+        });
+        onUpdated(updateIndicator);
+
         return {
             current, 
             defaults, 
@@ -80,9 +83,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$blue: #1890ff;
-$text-color: #333;
-$border-color: #d9d9d9;
+@import "../assets/helper.scss";
 
 .guoguo-tabs {
     &-nav {
@@ -91,17 +92,15 @@ $border-color: #d9d9d9;
         border-bottom: 1px solid $border-color;
         position: relative;
         &-item {
-            padding: 8px 0;
-            margin: 0 16px;
+            padding: 8px 16px;
             cursor: pointer;
             &.selected {
                 color: $blue;
             }
-            // &.disabled{
-            //     cursor: not-allowed
-            //     color: #ccc
-
-            //  }
+            &.disabled{
+                cursor: not-allowed;
+                color: #ccc
+             }
         }
         &-indicator {
             position: absolute;

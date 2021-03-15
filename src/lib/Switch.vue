@@ -16,7 +16,7 @@ export default defineComponent({
             },
             activeColor:{
                 type: String,
-                default: "#1890ff",
+                default: "#3366ff",
             },
             inactiveColor:{
                 type: String,
@@ -42,6 +42,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/helper.scss";
 $h: 22px;
 $h2: $h - 4px;
 .guoguo-switch {

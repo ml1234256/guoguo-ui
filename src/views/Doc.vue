@@ -104,15 +104,24 @@ $topnav-background:rgb(11,94,103);
             }
             > ul {
                 >li {
-                    margin-bottom:4px;
+                    //margin-bottom:4px;
                     >a{
                         display: block;
-                        padding: 4px 40px;
+                        padding: 6px 40px;
                         text-decoration: none;
-    
+                        &:hover{
+                            background: darken($color: $content-background, $amount: 5%);
+                            border-bottom: none;
+                        }
+                        &:active {
+                            background:darken($color: $content-background, $amount: 10%);
+                        }
                     }
                     .router-link-active {
                         background:#fff;
+                        &:hover {
+                            background:#fff;
+                        }
                     }
                 }
             }
