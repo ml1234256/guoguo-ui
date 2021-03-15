@@ -1,9 +1,9 @@
 <demo>垂直分割线</demo>
 <template>  
 鹅鹅鹅，曲项向天歌
-<Divider type='vertical'></Divider>
+<Divider vertical></Divider>
 白毛浮绿水
-<Divider type='vertical'></Divider>
+<Divider vertical></Divider>
 红掌拨清波
 </template>
 

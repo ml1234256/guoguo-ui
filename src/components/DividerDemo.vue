@@ -47,11 +47,11 @@ export default defineComponent({
             params: '——',
             default: 'false',
         },{
-            property: 'type',
-            description: '设置水平/垂直分割线',
-            type: 'string',
-            params: 'horizontal / vertical',
-            default: 'horizontal',
+            property: 'vertical',
+            description: '设置垂直分割线',
+            type: 'boolean',
+            params: '——',
+            default: '——',
         },{
             property: 'orientation',
             description: '设置分割线标题的位置',

@@ -69,7 +69,7 @@ export default defineComponent({
 @import "../assets/helper.scss";
 $h: 32px;
 $active: 6%;
-$focus: 8%;
+$focus: 10%;
 $disabled: 22%;
 .guoguo-button{
     box-sizing: border-box;

@@ -3,9 +3,9 @@
 鹅鹅鹅，曲项向天歌
 <Divider type='vertical' color='red'></Divider>
 白毛浮绿水
-<Divider type='vertical' color='red'></Divider>
+<Divider type='vertical' color='blue'></Divider>
 红掌拨清波
-<Divider color='green'></Divider>
+<Divider color='green' dashed></Divider>
 </template>
 
 <script lang="ts">
