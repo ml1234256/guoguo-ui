@@ -32,6 +32,9 @@
                     <li>
                         <router-link to="/card">Card 卡片</router-link>
                     </li>
+                    <li>
+                        <router-link to="/divider">Divider 分割线</router-link>
+                    </li>
                 </ul>
             </aside>
             

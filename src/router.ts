@@ -11,6 +11,7 @@ import GetStartDemo from './views/GetStarted.vue';
 import ProgressDemo from './components/ProgressDemo.vue';
 import TableDemo from './components/TableDemo.vue';
 import CardDemo from './components/CardDemo.vue';
+import DividerDemo from './components/DividerDemo.vue';
 
   
 const history = createWebHashHistory();
@@ -28,22 +29,9 @@ export const router = createRouter({
                 { path: "tabs", component: TabsDemo },
                 { path: "progress", component: ProgressDemo},
                 { path: "table", component: TableDemo},
-                { path: "card", component: CardDemo}
+                { path: "card", component: CardDemo },
+                { path: "divider", component: DividerDemo}
         ]  },
-        // {
-        //     path: "/doc", component: Doc, children: [
-        //         {path: "", redirect: "/doc/intro"},
-        //         { path: "intro", component: IntroDemo },
-        //         { path: "install", component: InstallDemo },
-        //         { path: "get-start", component: GetStartDemo },
-        //         { path: "button", component: ButtonDemo },
-        //         { path: "switch", component: SwitchDemo },
-        //         { path: "dialog", component: DialogDemo },
-        //         { path: "tabs", component: TabsDemo },
-        //         { path: "progress", component: ProgressDemo},
-        //         { path: "table", component: TableDemo},
-        //         { path: "card", component: CardDemo}
-        // ] }
     ]
 });
 

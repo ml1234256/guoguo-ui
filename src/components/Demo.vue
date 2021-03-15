@@ -45,34 +45,34 @@ export default defineComponent({
 <style lang="scss" scoped>
 $border-color: #ebebeb;
 $border-radius: 4px;
+$padding: 20px;
 
 .demo{
     box-shadow: 0 4px 6px #ebebeb;
     border-radius: $border-radius;
     text-align: left;
     background: #fff;
-    //padding: 0px 16px;
     >h3{
         font-size: 20px;
-        padding: 8px 16px;
+        padding: 8px $padding;
         border-bottom: 1px solid $border-color;
         margin: 0;
     }
     >.intro {
-        padding: 1em 16px;
+        padding: 1em $padding;
         font-size: 14px;
     }
     &-component{
-        padding-bottom: 16px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-bottom: $padding;
+        padding-left: $padding;
+        padding-right: $padding;
     }
     &-actions {
-        padding: 8px 16px;
+        padding: 8px $padding;
         border-top: 1px dashed $border-color;
     }
     &-code {
-        padding: 8px 16px;
+        padding: 8px $padding;
         border-top: 1px dashed $border-color;
         > pre {
             line-height: 1.1;
