@@ -91,6 +91,11 @@ export default defineComponent({
         color: $text-color;
         border-bottom: 1px solid $border-color;
         position: relative;
+        white-space: nowrap;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
         &-item {
             padding: 8px 16px;
             cursor: pointer;

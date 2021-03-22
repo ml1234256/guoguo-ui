@@ -17,7 +17,7 @@ import Tab from '../../lib/Tab.vue';
 export default {
     components: {Tabs, Tab},
     setup () {
-        const selected = ref('导航2');
+        const selected = ref('导航1');
 
         return {selected}
     }

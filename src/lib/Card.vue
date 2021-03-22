@@ -45,7 +45,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss"scoped>
+<style lang="scss" scoped>
 .card {
     border: 1px solid rgb(235, 238, 245);
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
