@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUpdated } from 'vue';
 
     export default {
         props: {
@@ -34,16 +34,21 @@ import { ref, onMounted } from 'vue';
             }
         },
         setup(props) {
-            let {percentage, color, strokeWidth, round, backgroundGrey} = props;
+            let {color, strokeWidth, round, backgroundGrey} = props;
             const barWrapper = ref<HTMLDivElement>(null);
             const up = ref<HTMLDivElement>(null);
             const down = ref<HTMLDivElement>(null);
-            onMounted(() => {
- 
-                if (percentage < 0) percentage =0 ;
-                if (percentage > 100) percentage = 100;
-                
-                up.value.style.width = percentage + '%';
+
+            const handel = () => {
+                var value = 0;
+                if(props.percentage > 100) {
+                    value = 100;
+                } else if(props.percentage < 0) {
+                    value = 0;
+                } else {
+                    value = props.percentage;
+                }
+                up.value.style.width = value + '%';
                 up.value.style.backgroundColor = color;
                 down.value.style.backgroundColor = color;
 
@@ -59,7 +64,10 @@ import { ref, onMounted } from 'vue';
                     down.value.style.opacity = '1';
                 }
                 up.value.style.lineHeight = height + 'px';
-             });
+             }
+
+             onMounted(handel);
+             onUpdated(handel);
             return {up, down,barWrapper}
         }
         
