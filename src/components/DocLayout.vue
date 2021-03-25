@@ -26,12 +26,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent,onMounted,ref } from 'vue';
+import {onMounted,ref } from 'vue';
 import Table from '../lib/Table.vue';
 import TableColumn from '../lib/TableColumn.vue';
 
 
-export default defineComponent({
+export default{
     components:{Table,TableColumn},
     props: {
         apiList: {
@@ -55,7 +55,7 @@ export default defineComponent({
             left
         };
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

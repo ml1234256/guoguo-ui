@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
-export default defineComponent({
+export default {
     props:{
         dashed: {
             type: Boolean,
@@ -44,7 +44,7 @@ export default defineComponent({
         })
         return {classes, divider}
     }
-})
+}
 </script>
 
 <style lang='scss' scoped>

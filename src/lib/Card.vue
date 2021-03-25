@@ -8,9 +8,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
-export default defineComponent({
+export default {
     props: {
         header: {
             type: String,
@@ -42,7 +42,7 @@ export default defineComponent({
             })
         return {cardHeader, cardBody}
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

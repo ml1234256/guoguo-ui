@@ -17,13 +17,13 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
+import { computed, ref } from 'vue';
 import Button from '../lib/Button.vue';
 import 'prismjs';
 import 'prismjs/themes/prism.css';
 const Prism = (window as any).Prism;
 
-export default defineComponent({
+export default{
     components: {Button},
     props: {
         component: Object
@@ -39,7 +39,7 @@ export default defineComponent({
 
         return {codeVisible, toggleCode, Prism, code}
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

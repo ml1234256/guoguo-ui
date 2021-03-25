@@ -17,10 +17,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted, onUpdated } from 'vue';
+import {ref, computed, onMounted, onUpdated } from 'vue';
 import Tab from './Tab.vue';
 
-export default defineComponent({
+export default {
     props: {
         selected: {
             type: String
@@ -79,7 +79,7 @@ export default defineComponent({
             container,
             content}
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

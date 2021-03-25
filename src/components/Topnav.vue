@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, Ref } from 'vue'
+import { inject, Ref } from 'vue'
 
-export default defineComponent({
+export default {
     props: {
       toggleVisible: {
           type: Boolean,
@@ -38,7 +38,7 @@ export default defineComponent({
 
         return {toggleMenu}
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

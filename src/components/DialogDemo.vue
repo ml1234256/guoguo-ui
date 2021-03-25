@@ -24,14 +24,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent} from 'vue';
 import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 import Dialog1Demo from './DialogDemo/Dialog1.demo.vue';
 import Dialog2Demo from './DialogDemo/Dialog2.demo.vue';
 import Dialog3Demo from './DialogDemo/Dialog3.demo.vue';
 
-export default defineComponent({
+export default {
     components: {Demo, DocLayout},
     setup () {
             const tableData = [{
@@ -49,7 +48,7 @@ export default defineComponent({
         }];
         return {Dialog1Demo, Dialog2Demo, Dialog3Demo, tableData}
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

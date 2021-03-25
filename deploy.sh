@@ -22,6 +22,7 @@ git commit -m 'update' &&
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
 git branch -M main  &&
-git push -f git@github.com:ml1234256/zhuzhu-money-website.git main:gh-pages
+git remote add origin git@github.com:ml1234256/pot-ui-website.git &&
+git push -f -u origin main &&
 
 cd -

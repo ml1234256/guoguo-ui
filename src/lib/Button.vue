@@ -6,10 +6,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, onMounted } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 
 
-export default defineComponent({
+export default {
     props: {
         theme: {
             type:String,
@@ -62,7 +62,7 @@ export default defineComponent({
         });
         return {classes, button, loadingIndicator};
     },
-});
+}
 </script>
 
 <style lang="scss" scoped>

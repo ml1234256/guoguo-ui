@@ -29,7 +29,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent} from 'vue';
 import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 import Divider1Demo from './DividerDemo/Divider1.demo.vue';
@@ -37,7 +36,7 @@ import Divider2Demo from './DividerDemo/Divider2.demo.vue';
 import Divider3Demo from './DividerDemo/Divider3.demo.vue';
 import Divider4Demo from './DividerDemo/Divider4.demo.vue';
 
-export default defineComponent({
+export default {
     components: {Demo, DocLayout},
     setup () {
             const tableData = [{
@@ -73,7 +72,7 @@ export default defineComponent({
             tableData
         }
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

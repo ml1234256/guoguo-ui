@@ -10,12 +10,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 import Table1Demo from './TableDemo/Table1.demo.vue'
 
-export default defineComponent({
+export default {
     components: {Demo, DocLayout},
     setup() {
         const tableData = [{
@@ -27,7 +26,7 @@ export default defineComponent({
         }]
         return {Table1Demo,tableData}
     }
-})
+}
 </script>
 
 <style scoped>

@@ -19,13 +19,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 import Tabs1Demo from './TabsDemo/Tabs1.demo.vue';
 import Tabs2Demo from './TabsDemo/Tabs2.demo.vue';
 
-export default defineComponent({
+export default {
     components: {Demo, DocLayout},
     setup () {
         const tableData = [{
@@ -43,7 +42,7 @@ export default defineComponent({
         }];
         return {tableData, Tabs1Demo, Tabs2Demo}
     }
-})
+}
 </script>
 
 <style scoped>

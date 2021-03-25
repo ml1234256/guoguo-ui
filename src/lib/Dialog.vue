@@ -23,10 +23,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import Button from './Button.vue';
 
-export default defineComponent({
+export default {
     components: {Button},
     props: {
         visible: {
@@ -58,17 +57,17 @@ export default defineComponent({
             }
         }
         const ok = () => {
-            if (props.ok?.() !== false) {
+            if (props.ok && props.ok() !== false) {
                 close()
             }
         }
         const cancel = () => {
-            props.cancel?.();
+            props.cancel && props.cancel();
             close();
         }
         return {close, onClickOverlay, ok, cancel}
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

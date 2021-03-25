@@ -41,7 +41,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import Demo from './Demo.vue';
 import Button1Demo from './ButtonDemo/Button1.demo.vue';
 import Button2Demo from './ButtonDemo/Button2.demo.vue';
@@ -53,7 +52,7 @@ import Table from '../lib/Table.vue';
 import TableColumn from '../lib/TableColumn.vue';
 import DocLayout from './DocLayout.vue';
 
-export default defineComponent({
+export default {
     components: {Demo, DocLayout,Table,TableColumn},
     setup () {
         const tableData = [{
@@ -103,7 +102,7 @@ export default defineComponent({
             Button6Demo
         };
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

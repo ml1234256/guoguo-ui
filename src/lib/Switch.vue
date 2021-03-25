@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUpdated, ref } from 'vue'
+import { onMounted, onUpdated, ref } from 'vue'
 
-export default defineComponent({
+export default{
     props: {
             value: Boolean,
             disabled: {
@@ -38,7 +38,7 @@ export default defineComponent({
         onUpdated(setColor)
         return {toggle,button}
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

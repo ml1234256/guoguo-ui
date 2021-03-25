@@ -29,7 +29,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 import Card1Demo from './CardDemo/Card1.demo.vue';
@@ -37,7 +36,7 @@ import Card2Demo from './CardDemo/Card2.demo.vue';
 import Card3Demo from './CardDemo/Card3.demo.vue';
 import Card4Demo from './CardDemo/Card4.demo.vue';
 
-export default defineComponent({
+export default {
     components: {Demo, DocLayout},
     setup () {
         const tableData = [{
@@ -68,7 +67,7 @@ export default defineComponent({
             Card4Demo
             }
     }
-})
+}
 </script>
 
 <style scoped>

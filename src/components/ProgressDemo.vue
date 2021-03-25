@@ -39,7 +39,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent} from 'vue';
 import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 import Progress1Demo from './ProgressDemo/Progress1.demo.vue';
@@ -49,7 +48,7 @@ import Progress4Demo from './ProgressDemo/Progress4.demo.vue';
 import Progress5Demo from './ProgressDemo/Progress5.demo.vue';
 import Progress6Demo from './ProgressDemo/Progress6.demo.vue';
 
-export default defineComponent({
+export default {
     components: {Demo, DocLayout},
     setup () {
         const tableData = [{
@@ -93,7 +92,7 @@ export default defineComponent({
             Progress6Demo
             }
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

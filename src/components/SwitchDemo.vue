@@ -24,7 +24,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import Switch1Demo from './SwitchDemo/Switch1.demo.vue';
 import Switch2Demo from './SwitchDemo/Switch2.demo.vue';
 import Switch3Demo from './SwitchDemo/Switch3.demo.vue';
@@ -32,7 +31,7 @@ import Demo from './Demo.vue';
 import DocLayout from './DocLayout.vue';
 
 
-export default defineComponent({
+export default {
     components:{ Demo, DocLayout},
     setup () {
         const tableData = [{
@@ -63,7 +62,7 @@ export default defineComponent({
         }];
         return {tableData,Switch1Demo, Switch2Demo,Switch3Demo};
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>
