@@ -1,14 +1,14 @@
 <demo>设置背景色为灰色</demo>
 <template>
-<Progress percentage="70" background-grey />
-<Progress percentage="33" :color="green" background-grey/>
+<Progress :percentage="70" background-grey />
+<Progress :percentage="33" :color="green" background-grey/>
 <Progress :color="orange" background-grey/>
-<Progress percentage="10" :color="red" background-grey/>
+<Progress :percentage="10" :color="red" background-grey/>
 
 </template>
 
 <script lang="ts">
-import Progress from '../../lib/Progress.vue';
+import {Progress} from '../../lib/index';
 
 export default{
     components: {Progress},

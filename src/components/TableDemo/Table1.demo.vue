@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import Table from '../../lib/Table.vue';
-import TableColumn from '../../lib/TableColumn.vue';
+import {Table} from '../../lib/index';
+import TableColumn from '../../lib/Table/TableColumn.vue';
 
 export default{
     components: {Table, TableColumn},

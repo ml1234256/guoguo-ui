@@ -9,17 +9,9 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
-import Divider from '../../lib/Divider.vue';
+import {Divider} from '../../lib/index';
 
 export default{
-    components: {Divider},
-    setup () {
-         const x = ref(false);
-        const toggle = ()=>{
-           x.value = !x.value;
-        }
-        return {x, toggle}
-    }
+    components: {Divider}
 }
 </script>

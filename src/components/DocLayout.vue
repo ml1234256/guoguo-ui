@@ -27,8 +27,8 @@
 
 <script lang="ts">
 import {onMounted,ref } from 'vue';
-import Table from '../lib/Table.vue';
-import TableColumn from '../lib/TableColumn.vue';
+import Table from '../lib/Table/Table.vue';
+import TableColumn from '../lib/Table/TableColumn.vue';
 
 
 export default{

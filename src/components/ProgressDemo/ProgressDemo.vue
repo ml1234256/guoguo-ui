@@ -30,23 +30,19 @@
                         设置进度条内的自定义内容。
                     </Demo>
                 </section>
-                <section>
-                    <Demo :component="Progress6Demo">
-                    </Demo>
-                </section>
             </template>
         </DocLayout>
 </template>
 
 <script lang="ts">
-import Demo from './Demo.vue';
-import DocLayout from './DocLayout.vue';
-import Progress1Demo from './ProgressDemo/Progress1.demo.vue';
-import Progress2Demo from './ProgressDemo/Progress2.demo.vue';
-import Progress3Demo from './ProgressDemo/Progress3.demo.vue';
-import Progress4Demo from './ProgressDemo/Progress4.demo.vue';
-import Progress5Demo from './ProgressDemo/Progress5.demo.vue';
-import Progress6Demo from './ProgressDemo/Progress6.demo.vue';
+import Demo from '../Demo.vue';
+import DocLayout from '../DocLayout.vue';
+import Progress1Demo from './Progress1.demo.vue';
+import Progress2Demo from './Progress2.demo.vue';
+import Progress3Demo from './Progress3.demo.vue';
+import Progress4Demo from './Progress4.demo.vue';
+import Progress5Demo from './Progress5.demo.vue';
+//import Progress6Demo from './ProgressDemo/Progress6.demo.vue';
 
 export default {
     components: {Demo, DocLayout},
@@ -89,7 +85,6 @@ export default {
             Progress3Demo,
             Progress4Demo,
             Progress5Demo,
-            Progress6Demo
             }
     }
 }

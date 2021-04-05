@@ -2,22 +2,22 @@
 
 <template>
 
-<Progress percentage="30" :stroke-width='25'>
+<Progress :percentage="30" :stroke-width="25">
     <h4>primary</h4>
 </Progress>
-<Progress percentage="60" :stroke-width='25' :color="green">
+<Progress :percentage="60" :stroke-width="25" :color="green">
     <h4>success</h4>
 </Progress>
-<Progress percentage="45" :stroke-width='25'  :color="orange">
+<Progress :percentage="45" :stroke-width="25"  :color="orange">
     <h4>wraning</h4>
 </Progress>
-<Progress percentage="80" :stroke-width='25'  :color="red">
+<Progress :percentage="80" :stroke-width="25"  :color="red">
     <h4>danger</h4>
 </Progress>
 </template>
 
 <script lang="ts">
-import Progress from '../../lib/Progress.vue';
+import {Progress} from '../../lib/index';
 
 export default{
     components: {Progress},

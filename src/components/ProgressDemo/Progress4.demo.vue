@@ -1,13 +1,13 @@
 <demo>设置宽度</demo>
 <template>
-<Progress percentage="85" stroke-width='10'/>
-<Progress percentage="20" stroke-width='15' :color="green"/>
-<Progress percentage="30" stroke-width='20' :color="orange"/>
-<Progress percentage="40" stroke-width='25' :color="red"/>
+<Progress :percentage="85" :stroke-width="10"/>
+<Progress :percentage="20" :stroke-width="15" :color="green"/>
+<Progress :percentage="30" :stroke-width="20" :color="orange"/>
+<Progress :percentage="40" :stroke-width="25" :color="red"/>
 </template>
 
 <script lang="ts">
-import Progress from '../../lib/Progress.vue';
+import {Progress} from '../../lib/index';
 
 export default{
     components: {Progress},

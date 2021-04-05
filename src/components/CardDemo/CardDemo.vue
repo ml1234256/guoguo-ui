@@ -29,12 +29,12 @@
 </template>
 
 <script lang="ts">
-import Demo from './Demo.vue';
-import DocLayout from './DocLayout.vue';
-import Card1Demo from './CardDemo/Card1.demo.vue';
-import Card2Demo from './CardDemo/Card2.demo.vue';
-import Card3Demo from './CardDemo/Card3.demo.vue';
-import Card4Demo from './CardDemo/Card4.demo.vue';
+import Demo from '../Demo.vue';
+import DocLayout from '../DocLayout.vue';
+import Card1Demo from './Card1.demo.vue';
+import Card2Demo from './Card2.demo.vue';
+import Card3Demo from './Card3.demo.vue';
+import Card4Demo from './Card4.demo.vue';
 
 export default {
     components: {Demo, DocLayout},

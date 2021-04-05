@@ -41,16 +41,16 @@
 </template>
 
 <script lang="ts">
-import Demo from './Demo.vue';
-import Button1Demo from './ButtonDemo/Button1.demo.vue';
-import Button2Demo from './ButtonDemo/Button2.demo.vue';
-import Button3Demo from './ButtonDemo/Button3.demo.vue';
-import Button4Demo from './ButtonDemo/Button4.demo.vue';
-import Button5Demo from './ButtonDemo/Button5.demo.vue';
-import Button6Demo from './ButtonDemo/Button6.demo.vue';
-import Table from '../lib/Table.vue';
-import TableColumn from '../lib/TableColumn.vue';
-import DocLayout from './DocLayout.vue';
+import Demo from '../Demo.vue';
+import Button1Demo from './Button1.demo.vue';
+import Button2Demo from './Button2.demo.vue';
+import Button3Demo from './Button3.demo.vue';
+import Button4Demo from './Button4.demo.vue';
+import Button5Demo from './Button5.demo.vue';
+import Button6Demo from './Button6.demo.vue';
+import Table from '../../lib/Table/Table.vue';
+import TableColumn from '../../lib/Table/TableColumn.vue';
+import DocLayout from '../DocLayout.vue';
 
 export default {
     components: {Demo, DocLayout,Table,TableColumn},

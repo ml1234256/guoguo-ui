@@ -15,6 +15,7 @@ import { ref, onMounted, onUpdated } from 'vue';
             percentage: {
                 type: Number,
                 default: 50,
+                required: true,
             },
             color: {
                 type: String,
@@ -49,6 +50,7 @@ import { ref, onMounted, onUpdated } from 'vue';
                     value = props.percentage;
                 }
                 up.value.style.width = value + '%';
+
                 up.value.style.backgroundColor = color;
                 down.value.style.backgroundColor = color;
 
@@ -86,7 +88,6 @@ import { ref, onMounted, onUpdated } from 'vue';
             z-index: 2;
             position: absolute;
             text-align: center;
-            padding:0 0.5em;
         }
         >.down {
             height: 100%;

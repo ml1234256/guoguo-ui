@@ -7,7 +7,7 @@
                 <ul>
                     <li><router-link to="/intro">介绍</router-link></li>
                     <li><router-link to="/install">安装</router-link></li>
-                    <li><router-link to="/get-start">快速上手</router-link></li>
+                    <li><router-link to="/get-started">快速上手</router-link></li>
                 </ul>
                 <h2>组件列表</h2>
                 <ul>
@@ -107,8 +107,9 @@ $topnav-background:rgb(11,94,103);
                     //margin-bottom:4px;
                     >a{
                         display: block;
-                        padding: 6px 40px;
+                        padding: 8px 40px;
                         text-decoration: none;
+                        font-size: 16px;
                         &:hover{
                             background: darken($color: $content-background, $amount: 5%);
                             border-bottom: none;

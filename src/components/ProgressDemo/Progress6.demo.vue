@@ -1,16 +1,15 @@
 <demo></demo>
 <template>
-{{percentage}}
+{{percentage + '%'}}
 <Progress :percentage="percentage" />
 <Button class="button" @click="decrease">&lt;</Button>
 <Button class="button" @click="increase">&gt;</Button>
 </template>
 
 <script lang="ts">
-import Progress from '../../lib/Progress.vue';
-import Button from '../../lib/Button.vue';
+import {Progress} from '../../lib/index';
+import {Button} from '../../lib/index';
 import { ref } from 'vue';
-
 export default{
     components: {Progress, Button},
     setup() {

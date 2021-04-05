@@ -1,17 +1,14 @@
 import { createWebHashHistory, createRouter } from "vue-router";
 import Home from "./views/Home.vue";
 import Doc from "./views/Doc.vue";
-import ButtonDemo from "./components/ButtonDemo.vue";
-import SwitchDemo from "./components/SwitchDemo.vue";
-import DialogDemo from "./components/DialogDemo.vue";
-import TabsDemo from "./components/TabsDemo.vue";
-import IntroDemo from './views/Intro.vue';
-import InstallDemo from './views/Install.vue';
-import GetStartDemo from './views/GetStarted.vue';
-import ProgressDemo from './components/ProgressDemo.vue';
-import TableDemo from './components/TableDemo.vue';
-import CardDemo from './components/CardDemo.vue';
-import DividerDemo from './components/DividerDemo.vue';
+import ButtonDemo from "./components/ButtonDemo/ButtonDemo.vue";
+import SwitchDemo from "./components/SwitchDemo/SwitchDemo.vue";
+import DialogDemo from "./components/DialogDemo/DialogDemo.vue";
+import TabsDemo from "./components/TabsDemo/TabsDemo.vue";
+import ProgressDemo from './components/ProgressDemo/ProgressDemo.vue';
+import TableDemo from './components/TableDemo/TableDemo.vue';
+import CardDemo from './components/CardDemo/CardDemo.vue';
+import DividerDemo from './components/DividerDemo/DividerDemo.vue';
 import Markdown from './components/Markdown.vue';
 import { h } from 'vue';
   
@@ -24,7 +21,7 @@ export const router = createRouter({
                 {path: "", redirect: "intro"},
                 { path: "intro", component: md('intro') },
                 { path: "install", component: md('install') },
-                { path: "get-start", component: md('get-start') },
+                { path: "get-started", component: md('get-started') },
                 { path: "button", component: ButtonDemo },
                 { path: "switch", component: SwitchDemo },
                 { path: "dialog", component: DialogDemo },

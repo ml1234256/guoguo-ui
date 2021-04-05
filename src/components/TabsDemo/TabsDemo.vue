@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts">
-import Demo from './Demo.vue';
-import DocLayout from './DocLayout.vue';
-import Tabs1Demo from './TabsDemo/Tabs1.demo.vue';
-import Tabs2Demo from './TabsDemo/Tabs2.demo.vue';
+import Demo from '../Demo.vue';
+import DocLayout from '../DocLayout.vue';
+import Tabs1Demo from './Tabs1.demo.vue';
+import Tabs2Demo from './Tabs2.demo.vue';
 
 export default {
     components: {Demo, DocLayout},
