@@ -12,17 +12,19 @@ import ProgressDemo from './components/ProgressDemo.vue';
 import TableDemo from './components/TableDemo.vue';
 import CardDemo from './components/CardDemo.vue';
 import DividerDemo from './components/DividerDemo.vue';
-
+import Markdown from './components/Markdown.vue';
+import { h } from 'vue';
   
 const history = createWebHashHistory();
+const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key:filename})
 export const router = createRouter({
     history: history,
     routes: [
         { path: "/", component: Doc, children: [
                 {path: "", redirect: "intro"},
-                { path: "intro", component: IntroDemo },
-                { path: "install", component: InstallDemo },
-                { path: "get-start", component: GetStartDemo },
+                { path: "intro", component: md('intro') },
+                { path: "install", component: md('install') },
+                { path: "get-start", component: md('get-start') },
                 { path: "button", component: ButtonDemo },
                 { path: "switch", component: SwitchDemo },
                 { path: "dialog", component: DialogDemo },

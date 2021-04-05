@@ -3,7 +3,7 @@
 使用 yarn 安装
 
 ```
-yarn add guoguo-ui
+yarn add pot-ui
 ```
 
 棒棒哒！

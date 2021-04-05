@@ -44,7 +44,6 @@ export default{
     },
     setup (props) {
         const left = ref<HTMLDivElement>(null);
-        console.log(11,left)
         onMounted(() => {
             if(props.oneClo) {
                 console.log(2, left.value)

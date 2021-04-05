@@ -31,7 +31,7 @@ export default {
         }
     },
     setup (props, context) {
-        let {selected} = props;
+       // let {selected} = props;
         const selectedItem = ref<HTMLDivElement>(null);
         const indicator = ref<HTMLDivElement>(null);
         const container = ref<HTMLDivElement>(null);
@@ -42,6 +42,7 @@ export default {
             context.emit('update:selected', node.props.title)
         }
         defaults.forEach((tag) => {
+                console.log(tag.type === Tab);
             if (tag.type !== Tab) {
                 throw new Error('Tabs 子标签必须是 Tab')
             }
