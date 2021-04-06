@@ -10,7 +10,7 @@
                 :key="index">{{node.props.title}}</div>
             <div class="guoguo-tabs-nav-indicator" ref="indicator"></div>
         </div>
-        <div class="guoguo-tabs-content" ref="content">
+        <div class="guoguo-tabs-content">
             <component :is="current" :key="current.props.title" />
         </div>
     </div>
@@ -24,25 +24,21 @@ export default {
     props: {
         selected: {
             type: String
-        },
-        center: {
-            teyp: Boolean,
-            default:false,
         }
     },
     setup (props, context) {
-       // let {selected} = props;
         const selectedItem = ref<HTMLDivElement>(null);
         const indicator = ref<HTMLDivElement>(null);
         const container = ref<HTMLDivElement>(null);
-        const content = ref<HTMLDivElement>(null);
+
         const defaults = context.slots.default();
         const select = (node) => {
             if(node.props.disabled === '') return;
             context.emit('update:selected', node.props.title)
         }
         defaults.forEach((tag) => {
-                console.log(tag.type === Tab);
+                console.log('tag.type: ', tag.type);
+                console.log('Tab: ', Tab);
             if (tag.type !== Tab) {
                 throw new Error('Tabs 子标签必须是 Tab')
             }
@@ -60,14 +56,7 @@ export default {
             const left = left2 - left1;
             indicator.value.style.left = left + 'px';
         }
-        onMounted(() => {
-            // defaults.forEach((node) => {
-            //     if(node.props.disabled === '' && selected === node.props.title) {
-            //         selected = defaults[0].props.title;
-            //     }
-            // })
-            updateIndicator();
-        });
+        onMounted(updateIndicator);
         onUpdated(updateIndicator);
 
         return {
@@ -77,8 +66,8 @@ export default {
             select, 
             selectedItem, 
             indicator, 
-            container,
-            content}
+            container
+            }
     }
 }
 </script>

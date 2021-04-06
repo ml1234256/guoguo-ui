@@ -2,10 +2,12 @@
     <div class="guoguo-topnav">
         <div class="guoguo-logo">
             <router-link to="/">
-             <svg class="icon">
-                    <use xlink:href="#icon-guo"></use>
-            </svg>
-            PotUI
+            <span>
+                <svg class="icon">
+                <use xlink:href="#icon-guo"></use>
+                </svg>
+            </span>
+            <span class="logo-text">PotUI</span>
             </router-link>
         </div>
 
@@ -54,6 +56,9 @@ export default {
         max-width: 6em;
         font-size:24px;
         color:#fff;
+        .logo-text {
+            padding: 6px;
+        }
     }
     >.guoguo-menu{
         display: flex;
