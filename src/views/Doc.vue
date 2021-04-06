@@ -2,7 +2,7 @@
     <div class="guoguo-layout">
         <Topnav toggleVisible class="guoguo-top-nav"/>
         <div class="guoguo-content">
-            <aside v-if="menuVisible" class="guoguo-side-nav">
+            <aside :class="{menuVisible}">
                 <h2>开发指南</h2>
                 <ul>
                     <li><router-link to="/intro">介绍</router-link></li>
@@ -60,9 +60,9 @@ import Topnav from "../components/Topnav.vue";
 </script>
 
 <style lang="scss" scoped>
-$border-color:#ddd;
-$content-background: rgb(245,245,245);
-$topnav-background:rgb(11,94,103);
+$border-color:#d9d9d9;
+$content-background: #f5f5f5;
+$topnav-background:#0B5E67;
 
 .guoguo-layout{
     height: 100vh;
@@ -81,7 +81,7 @@ $topnav-background:rgb(11,94,103);
         display: flex;
         flex-grow: 1;
         background-color: $content-background;
-        >.guoguo-side-nav {
+        >aside {
             width:220px;
             border-right: 1px solid #ebebeb;
             box-shadow: 0 4px 6px #ebebeb;
@@ -95,6 +95,13 @@ $topnav-background:rgb(11,94,103);
             left:0;
             overflow: auto;
             z-index:10;
+            transition: all 250ms;
+            @media(max-width:550px){
+                transform: translateX(-230px);
+                &.menuVisible{
+                    transform: translateX(0);
+                }
+            }
             &::-webkit-scrollbar {
             display: none;
         }

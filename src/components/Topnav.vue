@@ -7,7 +7,7 @@
                 <use xlink:href="#icon-guo"></use>
                 </svg>
             </span>
-            <span class="logo-text">PotUI</span>
+            <span class="logo-text">Pot Design</span>
             </router-link>
         </div>
 
@@ -53,11 +53,13 @@ export default {
     position: relative;
     z-index: 20;
     >.guoguo-logo {
-        max-width: 6em;
-        font-size:24px;
         color:#fff;
+        svg {
+            font-size: 24px;
+        }
         .logo-text {
             padding: 6px;
+            font-size:22px;
         }
     }
     >.guoguo-menu{
