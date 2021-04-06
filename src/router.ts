@@ -9,6 +9,9 @@ import ProgressDemo from './components/ProgressDemo/ProgressDemo.vue';
 import TableDemo from './components/TableDemo/TableDemo.vue';
 import CardDemo from './components/CardDemo/CardDemo.vue';
 import DividerDemo from './components/DividerDemo/DividerDemo.vue';
+import IntroDemo from './views/Intro.vue';
+import InstallDemo from './views/Install.vue';
+import GetStartedDemo from './views/GetStarted.vue';
 import Markdown from './components/Markdown.vue';
 import { h } from 'vue';
   
@@ -17,11 +20,14 @@ const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key:fil
 export const router = createRouter({
     history: history,
     routes: [
-        { path: "/", component: Doc, children: [
+        {
+            path: "/",
+            component: Doc,
+            children: [
                 {path: "", redirect: "intro"},
-                { path: "intro", component: md('intro') },
-                { path: "install", component: md('install') },
-                { path: "get-started", component: md('get-started') },
+                { path: "intro", component: IntroDemo },
+                { path: "install", component: InstallDemo },
+                { path: "get-started", component: GetStartedDemo },
                 { path: "button", component: ButtonDemo },
                 { path: "switch", component: SwitchDemo },
                 { path: "dialog", component: DialogDemo },
