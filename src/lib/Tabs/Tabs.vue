@@ -37,8 +37,6 @@ export default {
             context.emit('update:selected', node.props.title)
         }
         defaults.forEach((tag) => {
-                console.log('tag.type: ', tag.type);
-                console.log('Tab: ', Tab);
             if (tag.type !== Tab) {
                 throw new Error('Tabs 子标签必须是 Tab')
             }
