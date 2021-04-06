@@ -3,10 +3,10 @@
 在 main.js 中引入组件:
 
 ```
-import {Button} from "pot-ui-1"
+import {Button} from "pot-ui-2"
 ```
 
-使用:
+开始使用:
 
 ```
 <template>
@@ -15,7 +15,8 @@ import {Button} from "pot-ui-1"
   </div>
 </template>
 <script>
-import {Button} from "pot-ui-1"
+import {Button} from "pot-ui-2";
+import "pot-ui-2/dist/lib/pot.css";
 export default {
   components: {Button}
 }

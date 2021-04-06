@@ -2,9 +2,6 @@
     <article class="markdown-body" v-html="md">
         
     </article>
-    <article>
-      <markdown path="../markdown/intro.md" />
-    </article>
 </template>
 <script>
 import md from '../markdown/intro.md';

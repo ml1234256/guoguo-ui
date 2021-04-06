@@ -6,6 +6,7 @@
 npm install pot-ui-2
 ```
 
+
 使用 yarn 安装：
 
 ```
