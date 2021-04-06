@@ -60,7 +60,7 @@ import Topnav from "../components/Topnav.vue";
 </script>
 
 <style lang="scss" scoped>
-$border-color:#d9d9d9;
+$border-color:#ddd;
 $content-background: rgb(245,245,245);
 $topnav-background:rgb(11,94,103);
 
@@ -104,11 +104,9 @@ $topnav-background:rgb(11,94,103);
             }
             > ul {
                 >li {
-                    //margin-bottom:4px;
                     >a{
                         display: block;
                         padding: 8px 40px;
-                        text-decoration: none;
                         font-size: 16px;
                         &:hover{
                             background: darken($color: $content-background, $amount: 5%);
