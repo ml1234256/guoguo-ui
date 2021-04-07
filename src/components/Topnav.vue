@@ -78,6 +78,7 @@ export default {
         left: 16px;
         top: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
         display: none;
     }
     @media (max-width: 550px) {

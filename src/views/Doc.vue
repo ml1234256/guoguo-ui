@@ -4,13 +4,13 @@
         <div class="guoguo-content">
             <aside :class="{menuVisible}">
                 <h2>开发指南</h2>
-                <ul>
+                <ul @click="hideAside">
                     <li><router-link to="/intro">介绍</router-link></li>
                     <li><router-link to="/install">安装</router-link></li>
                     <li><router-link to="/get-started">快速上手</router-link></li>
                 </ul>
                 <h2>组件列表</h2>
-                <ul>
+                <ul @click="hideAside">
                     <li>
                         <router-link to="/button">Button 按钮</router-link>
                     </li>
@@ -54,7 +54,10 @@ import Topnav from "../components/Topnav.vue";
         components: {Topnav},
         setup() {
             const menuVisible = inject<Ref<Boolean>>("menuVisible"); // get
-            return {menuVisible};
+            const hideAside = () => {
+                menuVisible.value = false;
+            }
+            return {menuVisible, hideAside};
         }
     }
 </script>

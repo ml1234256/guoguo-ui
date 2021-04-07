@@ -91,7 +91,7 @@ h1 {
 }
 .api-list{
         padding:8px 16px;
-        margin: 0 $margin 40px $margin;
+        margin: 0 $margin 24px $margin;
         background: #fff;
         border-radius: 4px;
         width: 100%;
