@@ -68,7 +68,7 @@ export default {
 @import "../assets/helper.scss";
 $h: 32px;
 $active: 6%;
-$focus: 10%;
+$focus: 15%;
 $disabled: 22%;
 .guoguo-button{
     box-sizing: border-box;
@@ -79,7 +79,6 @@ $disabled: 22%;
     color: $text-color;
     border: 1px solid $border-color;
     border-radius: $radius;
-    // ??
     box-shadow: 0px 1px 0 fade-out(#000,0.95);
     display: inline-flex;
     justify-content: center;
