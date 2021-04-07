@@ -25,7 +25,12 @@
             </Demo>
         </section>
     </template>
-</DocLayout> 
+</DocLayout>
+<Pages :pre-link="`/card`">
+    <template v-slot:pre>
+        Card 卡片
+    </template>
+</Pages> 
 </template>
 
 <script lang="ts">
@@ -35,9 +40,10 @@ import Divider1Demo from './Divider1.demo.vue';
 import Divider2Demo from './Divider2.demo.vue';
 import Divider3Demo from './Divider3.demo.vue';
 import Divider4Demo from './Divider4.demo.vue';
+import Pages from '../Pages.vue';
 
 export default {
-    components: {Demo, DocLayout},
+    components: {Demo, DocLayout, Pages},
     setup () {
             const tableData = [{
            property: 'dashed',

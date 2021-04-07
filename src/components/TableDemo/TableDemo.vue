@@ -7,15 +7,24 @@
         </section>
     </template>
 </DocLayout>
+<Pages :pre-link="`/progress`" :next-link="`/card`">
+    <template v-slot:pre>
+        Progress 进度条
+    </template>
+    <template v-slot:next>
+       Card 卡片
+    </template>
+</Pages>
 </template>
 
 <script lang="ts">
 import Demo from '../Demo.vue';
 import DocLayout from '../DocLayout.vue';
-import Table1Demo from './Table1.demo.vue'
+import Table1Demo from './Table1.demo.vue';
+import Pages from '../Pages.vue';
 
 export default {
-    components: {Demo, DocLayout},
+    components: {Demo, DocLayout, Pages},
     setup() {
         const tableData = [{
             property: 'data',

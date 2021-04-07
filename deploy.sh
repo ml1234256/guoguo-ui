@@ -22,7 +22,7 @@ git commit -m 'update' &&
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
 git branch -M main  &&
-git remote add origin git@github.com:ml1234256/pot-ui-website.git &&
+git remote add origin git@gitee.com:xie-chuyi/pot-ui-website-1.git &&
 git push -f -u origin main &&
 
 cd -

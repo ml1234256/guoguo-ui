@@ -1,6 +1,6 @@
 <template>
     <DocLayout :api-list="tableData">
-    <template v-slot:title>Card 对话框</template>
+    <template v-slot:title>Card 卡片</template>
     <template v-slot:left>
         <section>
             <Demo :component="Card1Demo" />
@@ -26,18 +26,27 @@
         </section>
     </template>
     </DocLayout>
+    <Pages :pre-link="`/table`" :next-link="`/divider`">
+    <template v-slot:pre>
+        Table 表格
+    </template>
+    <template v-slot:next>
+       Divider 分割线
+    </template>
+</Pages>
 </template>
 
 <script lang="ts">
 import Demo from '../Demo.vue';
 import DocLayout from '../DocLayout.vue';
+import Pages from '../Pages.vue';
 import Card1Demo from './Card1.demo.vue';
 import Card2Demo from './Card2.demo.vue';
 import Card3Demo from './Card3.demo.vue';
 import Card4Demo from './Card4.demo.vue';
 
 export default {
-    components: {Demo, DocLayout},
+    components: {Demo, DocLayout, Pages},
     setup () {
         const tableData = [{
             property: 'header',

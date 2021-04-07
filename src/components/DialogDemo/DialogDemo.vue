@@ -21,6 +21,14 @@
         </section>
     </template>
 </DocLayout> 
+<Pages :pre-link="`/switch`" :next-link="`/tabs`">
+    <template v-slot:pre>
+        Switch 开关
+    </template>
+    <template v-slot:next>
+       Tabs 标签页
+    </template>
+</Pages>
 </template>
 
 <script lang="ts">
@@ -29,9 +37,10 @@ import DocLayout from '../DocLayout.vue';
 import Dialog1Demo from './Dialog1.demo.vue';
 import Dialog2Demo from './Dialog2.demo.vue';
 import Dialog3Demo from './Dialog3.demo.vue';
+import Pages from '../Pages.vue';
 
 export default {
-    components: {Demo, DocLayout},
+    components: {Demo, DocLayout, Pages},
     setup () {
             const tableData = [{
            property: 'footer',

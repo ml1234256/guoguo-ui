@@ -22,7 +22,7 @@ import {Button} from '../../lib/index';
 export default{
     components: {Dialog, Button},
     setup () {
-         const x = ref(false);
+        const x = ref(false);
         const toggle = ()=>{
            x.value = !x.value;
         }

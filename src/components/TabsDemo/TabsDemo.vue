@@ -1,6 +1,6 @@
 <template>
 <DocLayout :api-list="tableData">
-    <template v-slot:title>Tab 标签页</template>
+    <template v-slot:title>Tabs 标签页</template>
     <template v-slot:left>
         <section>
             <Demo :component="Tabs1Demo">
@@ -16,6 +16,14 @@
         </section>
     </template>
 </DocLayout>
+<Pages :pre-link="`/dialog`" :next-link="`/progress`">
+    <template v-slot:pre>
+        Dialog 对话框
+    </template>
+    <template v-slot:next>
+       Progress 进度条
+    </template>
+</Pages>
 </template>
 
 <script lang="ts">
@@ -23,9 +31,10 @@ import Demo from '../Demo.vue';
 import DocLayout from '../DocLayout.vue';
 import Tabs1Demo from './Tabs1.demo.vue';
 import Tabs2Demo from './Tabs2.demo.vue';
+import Pages from '../Pages.vue';
 
 export default {
-    components: {Demo, DocLayout},
+    components: {Demo, DocLayout, Pages},
     setup () {
         const tableData = [{
             property: 'selected',

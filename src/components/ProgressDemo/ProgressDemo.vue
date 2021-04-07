@@ -1,6 +1,6 @@
 <template>
         <DocLayout :api-list="tableData">
-            <template v-slot:title>Process 进度条</template>
+            <template v-slot:title>Progress 进度条</template>
             <template v-slot:left>
                 <section>
                     <Demo :component="Progress1Demo">
@@ -32,11 +32,20 @@
                 </section>
             </template>
         </DocLayout>
+    <Pages :pre-link="`/tabs`" :next-link="`/table`">
+        <template v-slot:pre>
+            Tabs 标签页
+        </template>
+        <template v-slot:next>
+            Table 表格
+        </template>
+    </Pages>
 </template>
 
 <script lang="ts">
 import Demo from '../Demo.vue';
 import DocLayout from '../DocLayout.vue';
+import Pages from '../Pages.vue';
 import Progress1Demo from './Progress1.demo.vue';
 import Progress2Demo from './Progress2.demo.vue';
 import Progress3Demo from './Progress3.demo.vue';
@@ -45,7 +54,7 @@ import Progress5Demo from './Progress5.demo.vue';
 //import Progress6Demo from './ProgressDemo/Progress6.demo.vue';
 
 export default {
-    components: {Demo, DocLayout},
+    components: {Demo, DocLayout,Pages},
     setup () {
         const tableData = [{
             property: 'percentage',

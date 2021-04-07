@@ -21,6 +21,14 @@
         </section>
     </template>
 </DocLayout>
+<Pages :pre-link="`/button`" :next-link="`/dialog`">
+    <template v-slot:pre>
+        Button 按钮
+    </template>
+    <template v-slot:next>
+       Dialog 对话框
+    </template>
+</Pages>
 </template>
 
 <script lang="ts">
@@ -29,10 +37,11 @@ import Switch2Demo from './Switch2.demo.vue';
 import Switch3Demo from './Switch3.demo.vue';
 import Demo from '../Demo.vue';
 import DocLayout from '../DocLayout.vue';
+import Pages from '../Pages.vue';
 
 
 export default {
-    components:{ Demo, DocLayout},
+    components:{ Demo, DocLayout, Pages},
     setup () {
         const tableData = [{
             property: 'value/v-model',

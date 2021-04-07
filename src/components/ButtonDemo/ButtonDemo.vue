@@ -37,7 +37,14 @@
         </section>
     </template>
 </DocLayout>
-
+<Pages :pre-link="`/get-started`" :next-link="`/switch`">
+    <template v-slot:pre>
+        快速上手
+    </template>
+    <template v-slot:next>
+       Switch 开关
+    </template>
+</Pages>
 </template>
 
 <script lang="ts">
@@ -51,9 +58,10 @@ import Button6Demo from './Button6.demo.vue';
 import Table from '../../lib/Table/Table.vue';
 import TableColumn from '../../lib/Table/TableColumn.vue';
 import DocLayout from '../DocLayout.vue';
+import Pages from '../Pages.vue';
 
 export default {
-    components: {Demo, DocLayout,Table,TableColumn},
+    components: {Demo, DocLayout, Pages, Table,TableColumn},
     setup () {
         const tableData = [{
             property: 'theme',
@@ -110,5 +118,4 @@ export default {
 section{
         margin-bottom:24px;
     }
-
 </style>
