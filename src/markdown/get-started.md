@@ -15,10 +15,10 @@ import {Button} from "pot-ui-2"
   </div>
 </template>
 <script>
-import {Button} from "pot-ui-2";
-import "pot-ui-2/dist/lib/pot.css";
-export default {
-  components: {Button}
-}
+  import {Button} from "pot-ui-2";
+  import "pot-ui-2/dist/lib/pot.css";
+  export default {
+    components: {Button}
+  }
 </script>
 ```
