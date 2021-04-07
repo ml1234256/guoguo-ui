@@ -16,13 +16,12 @@
 
 <script lang="ts">
 import { ref } from 'vue';
-import {Dialog} from '../../lib/index';
-import {Button} from '../../lib/index';
+import {Dialog, Button} from '../../lib/index';
 
 export default{
     components: {Dialog, Button},
     setup () {
-         const x = ref(false);
+        const x = ref(false);
         const toggle = ()=>{
            x.value = !x.value;
         }

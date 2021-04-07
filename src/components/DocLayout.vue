@@ -46,7 +46,6 @@ export default{
         const left = ref<HTMLDivElement>(null);
         onMounted(() => {
             if(props.oneClo) {
-                console.log(2, left.value)
                 left.value.style.width='100%';
             }
         })

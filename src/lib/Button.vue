@@ -46,7 +46,6 @@ export default {
                 button.value.style.borderRadius = Math.round(height/2) + 'px';
             }
             if(loading && button.value.className.split(" ").indexOf('guoguo-theme-basic')>-1){
-                console.log(loadingIndicator.value)
                 loadingIndicator.value.style.borderColor = "#d9d9d9";
                 loadingIndicator.value.style.borderLeft = "transparent";
             }

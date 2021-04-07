@@ -41,7 +41,10 @@ export default {
             default:true,
         },
         ok: {
-            type:Function
+            type:Function,
+            default: () => {
+                return true;
+            }
         },
         cancel: {
             type: Function
