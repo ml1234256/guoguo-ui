@@ -60,7 +60,8 @@ $h2: $h - 4px;
     >span {
         position: absolute; top: 2px; left: 2px;
         height: $h2; width: $h2; background-color: #fff;
-        border-radius: $h2/2; transition: all 250ms;
+        border-radius: $h2/2;
+         transition: all 250ms;
     }
     &:focus { outline: none;}
     &:active {
