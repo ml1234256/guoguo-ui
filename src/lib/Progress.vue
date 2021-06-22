@@ -88,6 +88,7 @@ import { ref, onMounted, onUpdated } from 'vue';
             z-index: 2;
             position: absolute;
             text-align: center;
+            transition: width 0.6s;
         }
         >.down {
             height: 100%;

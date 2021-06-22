@@ -4,8 +4,8 @@
 
 {{percentage + '%'}}
 <Progress :percentage="percentage" />
-<Button class="button" @click="reduce">减</Button>
-<Button class="button" @click="add">加</Button>
+<Button class="button" @click="reduce">&lt;</Button>
+<Button class="button" @click="add">&gt;</Button>
 </template>
 
 <script lang="ts">
