@@ -30,6 +30,11 @@
                         设置进度条内的自定义内容。
                     </Demo>
                 </section>
+                  <section>
+                    <Demo :component="Progress6Demo">
+                        
+                    </Demo>
+                </section>
             </template>
         </DocLayout>
     <Pages :pre-link="`/tabs`" :next-link="`/table`">
@@ -51,10 +56,15 @@ import Progress2Demo from './Progress2.demo.vue';
 import Progress3Demo from './Progress3.demo.vue';
 import Progress4Demo from './Progress4.demo.vue';
 import Progress5Demo from './Progress5.demo.vue';
-//import Progress6Demo from './ProgressDemo/Progress6.demo.vue';
+import Progress6Demo from './Progress6.demo.vue';
+import { computed, ref } from 'vue';
+import Button from '../../lib/Button.vue';
+import 'prismjs';
+import 'prismjs/themes/prism.css';
+const Prism = (window as any).Prism;
 
 export default {
-    components: {Demo, DocLayout,Pages},
+    components: {Demo, DocLayout,Pages,Button},
     setup () {
         const tableData = [{
             property: 'percentage',
@@ -86,14 +96,18 @@ export default {
             type: 'boolean',
             params: '——',
             default: 'false',
-        }]
+        }];
+        const codeVisible = ref(false);
         return {
+            codeVisible,
+            Prism,
             tableData,
             Progress1Demo,
             Progress2Demo,
             Progress3Demo,
             Progress4Demo,
             Progress5Demo,
+            Progress6Demo
             }
     }
 }
